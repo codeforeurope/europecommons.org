@@ -1,0 +1,7 @@
+name = "Menu Block"
+description = "Provides configurable blocks of menu items."
+
+core = 7.x
+dependencies[] = menu (>7.11)
+
+configure = admin/config/user-interface/menu-block

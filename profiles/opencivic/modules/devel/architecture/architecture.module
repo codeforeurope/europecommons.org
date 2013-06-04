@@ -1,0 +1,342 @@
+<?php
+/**
+ * @file
+ * This is the file description for Untitled 2 module.
+ *
+ * In this more verbose, multi-line description, you can specify what this
+ * file does exactly. Make sure to wrap your documentation in column 78 so
+ * that the file can be displayed nicely in default-sized consoles.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function architecture_menu() {
+  $items = array();
+  $items['admin/reports/architecture/entities'] = array(
+    'title' => 'Site Entities',
+    'description' => 'Displays entities that are defined for this Drupal website.',
+    'page callback' => 'architecture_entities_page',
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  if (module_exists('taxonomy')) {
+    $items['admin/reports/architecture/taxonomies'] = array(
+      'title' => 'Site Taxonomies',
+      'description' => 'Displays taxonomies that are defined for this Drupal website.',
+      'page callback' => 'architecture_taxonomies_page',
+      'access arguments' => array('administer site configuration'),
+      'type' => MENU_NORMAL_ITEM,
+    );
+  }
+  $items['admin/reports/architecture/variables'] = array(
+    'title' => 'Site Variables',
+    'description' => 'Displays variables that are defined for this Drupal website.',
+    'page callback' => 'architecture_variables_page',
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  if (module_exists('features')) {
+    $items['admin/reports/architecture/features'] = array(
+      'title' => 'Site Features',
+      'description' => 'Displays site architecture managed by the Features module.',
+      'page callback' => 'architecture_features_page',
+      'access arguments' => array('administer site configuration'),
+      'type' => MENU_NORMAL_ITEM,
+    );
+  }
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function architecture_theme() {
+  return array(
+    'architecture_fields' => array(),
+    'architecture_entity_types' => array(),
+    'architecture_taxonomies' => array(),
+    'architecture_variables' => array(),
+    'architecture_features' => array(),
+  );
+}
+
+/**
+ * Returns the site entities page.
+ */
+function architecture_entities_page() {
+  return theme('architecture_entity_types', architecture_entity_types());
+}
+
+/**
+ * Returns the site taxonomies page.
+ */
+function architecture_taxonomies_page() {
+  return theme('architecture_taxonomies', architecture_taxonomies());
+}
+
+/**
+ * Returns the site variables page.
+ */
+function architecture_variables_page() {
+  return theme('architecture_variables');
+}
+
+/**
+ * Returns the site features page.
+ */
+function architecture_features_page() {
+  return theme('architecture_features', architecture_features());
+}
+
+/**
+* Turns an array of fields into a formatted HTML list.
+*
+* @param $fields
+*   An array of fields.
+*/
+function theme_architecture_fields($fields=array()) {
+  if ($fields) {
+    $output = '<dl>';
+    foreach ($fields as $machine_name => $field) {
+      $output .= '<dt><b>' . $field['label'] . '</b>' .
+        ($field['required'] ? '<span class="form-required" title="This field is required.">*</span>' : '') .
+        ' <i>(' . $machine_name . '):</i> ' . $field['type'] . '</dt>' .
+        "<dd> Widget: " . $field['widget_label'] . ' <i>(' . $field['widget_type'] . ')</i>' .
+        ($field['description'] ? '<br /><i>Help text:</i> ' . $field['description'] : '') . '</dd>';
+    }
+    $output .= '</dl>';
+    return $output;
+  }
+}
+
+/**
+* Returns a structured array of information about entity types
+*
+* @param $requested_types
+*   A simple array of entity types to be returned.
+*/
+function architecture_entity_types($requested_types=NULL) {
+  $types = entity_get_info();
+  $content_types = _node_types_build()->types;
+  $entity_types = array();
+  foreach ($types as $type => $details) {
+    if (!is_array($requested_types) || in_array($type, $requested_types)) {
+      $entity_types[$type] = array(
+        'label' => $details['label'],
+        'description' => isset($details['description']) ? $details['description'] : '',
+        'fieldable' => $details['fieldable'],
+        'bundles' => array(),
+      );
+      foreach ($details['bundles'] as $bundle_name => $bundle_details) {
+        $entity_types[$type]['bundles'][$bundle_name] = array(
+          'label' => $bundle_details['label'],
+          'description' => isset($bundle_details['description']) ? $bundle_details['description'] : '',
+        );
+        if ($type == 'node') {
+          $entity_types[$type]['bundles'][$bundle_name]['description'] = $content_types[$bundle_name]->description;
+        }
+        if ($details['fieldable']) {
+          $fields = field_info_instances($type, $bundle_name);
+          $entity_types[$type]['bundles'][$bundle_name]['fields'] = array();
+          foreach ($fields as $name => $particulars) {
+            $field_info = field_info_field($name);
+            $widget_type = field_info_widget_types($particulars['widget']['type']);
+            $entity_types[$type]['bundles'][$bundle_name]['fields'][$name] = array(
+              'label' => $particulars['label'],
+              'type' => $field_info['type'],
+              'description' => $particulars['description'],
+              'required' => $particulars['required'],
+              'widget_type' => $particulars['widget']['type'],
+              'widget_label' => $widget_type['label'],
+            );
+          }
+        }
+      }
+    }
+  }
+  return $entity_types;
+}
+
+/**
+* Turns an array of entity types into formatted HTML.
+*
+* @param $entity_types
+*   An array of entity types.
+*/
+function theme_architecture_entity_types($entity_types=array()) {
+  $output = '';
+  foreach ($entity_types as $type => $details) {
+    $output .= '<h1 class="architecture-entity">' . $details['label'] . ' entities</h1>';
+    if ($details['description']) {
+      $output .= '<p>' . $details['description'] . '</p>';
+    }
+    foreach ($details['bundles'] as $bundle_name => $bundle_details) {
+      $output .= '<h2 class="architecture-bundle">' . $bundle_details['label'] . '</h2>';
+      $output .= "<p><b>Machine name: </b>" . $bundle_name . '</p>';
+      if ($bundle_details['description']) {
+        $output .= "<p>" . $bundle_details['description'] . '</p>';
+      }
+      if ($details['fieldable']) {
+        $output .= theme('architecture_fields', $bundle_details['fields'], $type, $bundle_name);
+      }
+    }
+  }
+  return $output;
+}
+
+/**
+* Returns a structured array of information about taxonomies
+*
+* @param $requested_taxonomies
+*   A simple array of taxonomies to be returned.
+*/
+function architecture_taxonomies($requested_taxonomies=NULL) {
+  $vocabularies = taxonomy_get_vocabularies();
+  $vocabs = array();
+  foreach ($vocabularies as $vocab => $details) {
+    if (!is_array($requested_taxonomies) || in_array($vocab, $requested_taxonomies)) {
+      $vocabs[$vocab] = array(
+        'name' => $details->name,
+        'machine_name' => $details->machine_name,
+        'description' => $details->description,
+        'terms' => array(),
+      );
+      $terms = taxonomy_get_tree($vocab);
+      foreach($terms as $term){
+        $vocabs[$vocab]['terms'][]= $term->name;
+      }
+    }
+  }
+  return $vocabs;
+}
+
+/**
+* Turns an array of taxonomies into formatted HTML.
+*
+* @param $vocabularies
+*   A stuctured array of information about taxonomies.
+*/
+function theme_architecture_taxonomies($vocabularies=array()) {
+  $output = '';
+  foreach ($vocabularies as $vocab => $details) {
+    $output .= '<h1 class="architecture-entity">' . $details['name'] . '</h1>';
+    $output .= "<p><b>Machine name: </b>" . $details['machine_name'] . '</p>';
+    if ($details['description']) {
+      $output .= '<p>' . $details['description'] . '</p>';
+    }
+    $output .= theme('item_list', array(
+      'items' => $details['terms'],
+      'title' => 'Terms',
+      'type' => 'ul',
+      'attributes' => array('class' => array('architecture-fields', 'architecture-vocabulary-term' . '-' . $details['machine_name'])),
+    ));
+  }
+  return $output;
+}
+
+/**
+* Turns an array of variable keys into a formatted HTML list.
+*
+* @param $keys
+*   A simple array of requested variable keys.
+*/
+function theme_architecture_variables($keys=array()) {
+  global $conf;
+  if (!$requested_keys) {
+    $keys = array_keys($conf);
+  }
+  $output = '';
+  foreach ($keys as $name) {
+    $output .= '<h2 class="architecture-bundle">' . $name . '</h1>';
+    $output .= '<pre>' . print_r($conf[$name], TRUE) . '</pre>';
+  }
+  return $output;
+}
+
+/**
+* Returns a structured array of information about features created by the Features module.
+*/
+function architecture_features() {
+  module_load_include('inc', 'features', 'features.export');
+  $rows = array();
+  foreach (features_get_features(NULL, TRUE) as $k => $m) {
+    switch (features_get_storage($m->name)) {
+      case FEATURES_DEFAULT:
+      case FEATURES_REBUILDABLE:
+        $storage = '';
+        break;
+      case FEATURES_OVERRIDDEN:
+        $storage = t('Overridden');
+        break;
+      case FEATURES_NEEDS_REVIEW:
+        $storage = t('Needs review');
+        break;
+    }
+    $rows[] = array(
+      'name' => $m->info['name'],
+      'feature' => $m->name,
+      'status' => $m->status ? t('Enabled') : t('Disabled'),
+      'state' => $storage,
+      'node' => $m->info['features']['node'],
+      'page_manager_pages' => $m->info['features']['page_manager_pages'],
+      'taxonomy' => $m->info['features']['taxonomy'],
+      'views_view' => $m->info['features']['views_view'],
+    );
+/*
+    if ($m->name == 'cc_application') {
+      drupal_set_message(print_r($k, TRUE));
+      drupal_set_message('<pre>' . print_r($m, TRUE) . '</pre>');
+    }
+*/
+  }
+  return $rows;
+}
+
+/**
+* Turns an array of features into formatted HTML.
+*
+* @param $features
+*   An array of features.
+*/
+function theme_architecture_features($features) {
+  foreach ($features as $feature) {
+    
+    $output .= '<h1 class="architecture-entity">' . $feature['name'] . '</h1>';
+    $output .= "<p><b>Machine name: </b>" . $feature['feature'] . "<br />";
+    $output .= $feature['status'] . ": " . $feature['state'] . "</p>";
+    if ($feature['node']) {
+      $output .= theme('item_list', array(
+        'items' => $feature['node'],
+        'title' => 'Content Types',
+        'type' => 'ul',
+        'attributes' => array('class' => array('architecture-fields', 'architecture-vocabulary-term' . '-' . $details['machine_name'])),
+      ));
+    }
+    if ($feature['page_manager_pages']) {
+      $output .= theme('item_list', array(
+        'items' => $feature['page_manager_pages'],
+        'title' => 'Panels Pages',
+        'type' => 'ul',
+        'attributes' => array('class' => array('architecture-fields', 'architecture-vocabulary-term' . '-' . $details['machine_name'])),
+      ));
+    }
+    if ($feature['taxonomy']) {
+      $output .= theme('item_list', array(
+        'items' => $feature['taxonomy'],
+        'title' => 'Taxonomies',
+        'type' => 'ul',
+        'attributes' => array('class' => array('architecture-fields', 'architecture-vocabulary-term' . '-' . $details['machine_name'])),
+      ));
+    }
+    if ($feature['views_view']) {
+      $output .= theme('item_list', array(
+        'items' => $feature['views_view'],
+        'title' => 'Views',
+        'type' => 'ul',
+        'attributes' => array('class' => array('architecture-fields', 'architecture-vocabulary-term' . '-' . $details['machine_name'])),
+      ));
+    }
+  }
+  return $output;
+}
