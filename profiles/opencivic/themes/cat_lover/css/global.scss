@@ -38,7 +38,7 @@
 
 /* hide login bar links */
 #region-content-top .rpx-links,
-#region-search-bar .rpx-links {
+#region-header .rpx-links {
   display: none; }
 
 /* make linkedin link big on user login */
@@ -361,7 +361,7 @@ aside .content {
 .site-name-slogan {
   display: none; }
 
-#region-top-menu {
+#region-menu-bar {
   margin-right: 0;
   float: right; }
 
@@ -479,12 +479,12 @@ ul.nice-menu {
 }  
 
 /* Navigation */
-#region-search-bar {
+#region-header {
   position: relative; }
 
 
 body.page-preview {
-  #region-search-bar, #breadcrumb {
+  #region-header, #breadcrumb {
     display: none;
   }
   #region-content {
@@ -498,8 +498,8 @@ body.page-user #breadcrumb {
   margin-top: 0px; }
 
 
-#region-search-bar {
-  .region-search-bar-inner {
+#region-header {
+  .region-header-inner {
     /*  margin-bottom: 3px;  */
     background: url("../images/search-bg.png") center top no-repeat;
     height: 57px;
@@ -559,7 +559,7 @@ input#edit-go {
  * Search bar region
  */
  
-#region-search-bar {
+#region-header {
   .section-nav .menu {
     float: left;
     border-right: 1px solid gainsboro;
@@ -2102,34 +2102,34 @@ article.node-interaction {
 /**
  * Three column regions.  They get their heights shared.
  */
-.region-content-main-left #block-views-interactions-block .content {
+.region-three-33-first #block-views-interactions-block .content {
   padding: 0; }
 
-.container-16 .grid-5.region-content-main-left,
-.container-16 .grid-5.region-content-main-middle,
-.container-16 .grid-5.region-content-main-right {
+.container-16 .grid-5.region-three-33-first,
+.container-16 .grid-5.region-three-33-second,
+.container-16 .grid-5.region-three-33-third {
   width: 300px; }
 
-.region-content-main-left .view,
-.region-content-main-middle .view,
-.region-content-main-right .view {
+.region-three-33-first .view,
+.region-three-33-second .view,
+.region-three-33-third .view {
   position: relative;
   margin: 0;
   padding: 0 0.8em; }
 
-.region-content-main-left .view .item-list,
-.region-content-main-middle .view .item-list,
-.region-content-main-right .view .item-list,
-.region-content-main-right .view .view-footer,
-.region-content-main-middle .view .view-footer,
-.region-content-main-left .view .view-footer {
+.region-three-33-first .view .item-list,
+.region-three-33-second .view .item-list,
+.region-three-33-third .view .item-list,
+.region-three-33-third .view .view-footer,
+.region-three-33-second .view .view-footer,
+.region-three-33-first .view .view-footer {
   position: absolute;
   bottom: 0;
   width: 100%; }
 
-.region-content-main-left .view .views-row-last,
-.region-content-main-middle .view .views-row-last,
-.region-content-main-right .view .views-row-last {
+.region-three-33-first .view .views-row-last,
+.region-three-33-second .view .views-row-last,
+.region-three-33-third .view .views-row-last {
   padding-bottom: 30px; }
 
 /**
@@ -2202,7 +2202,7 @@ h2.architecture-bundle {
   margin: 0 25px; }
 
 /* Solr search bar */
-#region-search-bar .form-submit {
+#region-header .form-submit {
   background: url("../images/search_gray_btn.png") no-repeat scroll 0 0 transparent;
   border: medium none;
   color: transparent;
@@ -2212,7 +2212,7 @@ h2.architecture-bundle {
   text-shadow: none;
   border-radius: 0; }
 
-#region-search-bar input#edit-term {
+#region-header input#edit-term {
   -moz-border-bottom-colors: none;
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;

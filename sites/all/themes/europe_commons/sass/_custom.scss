@@ -17,6 +17,8 @@
 //   @include mix-in-name;
 //
 
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
 //
 // Color Variables
 // Colors used in the sample global.styles. You can use these to recolor many
@@ -53,7 +55,7 @@ $primary_task_active: $page;
 // theme settings for web safe fonts.
 //
 $fat-header:                  'governorregular', Arial, Helvetica, sans-serif;
-$thin-header:                 'LeagueGothicRegular', Arial, Helvetica, sans-serif;
+$thin-header:                 'Montserrat', Arial, Helvetica, sans-serif;
 $sans-serif-small:            'Helvetica Neue', Arial, Helvetica, sans-serif;
 $sans-serif-large:            Verdana, Geneva, 'DejaVu Sans', Arial, Helvetica, sans-serif;
 $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;

@@ -13,9 +13,9 @@ function appcat_misc_taxonomy_app_terms_taxonomy_default_vocabularies() {
       'name' => 'Application function',
       'machine_name' => 'application_category',
       'description' => 'The technical function of the software.',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
