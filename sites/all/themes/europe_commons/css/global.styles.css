@@ -598,8 +598,8 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 .region-two-50-second a:nth-child(1):hover { background: transparent url(../images/Add_App_G.png) no-repeat center top; }
 .region-two-50-second a:nth-child(2) { background: transparent url(../images/Add_Org_Y.png) no-repeat center top; }
 .region-two-50-second a:nth-child(2):hover { background: transparent url(../images/Add_Org_G.png) no-repeat center top; }
-.region-two-50-second a:nth-child(3) { background: transparent url(../images/write_story_Y.png) no-repeat center top; }
-.region-two-50-second a:nth-child(3):hover { background: transparent url(../images/write_story_G.png) no-repeat center top; }
+.region-two-50-second a:nth-child(3) { background: transparent url(../images/Write_story_Y.png) no-repeat center top; }
+.region-two-50-second a:nth-child(3):hover { background: transparent url(../images/Write_story_G.png) no-repeat center top; }
 
 #block-views-sponsors-block-block h2.block-title { height: 40px; padding-top: 10px; padding-left: 10px; }
 
