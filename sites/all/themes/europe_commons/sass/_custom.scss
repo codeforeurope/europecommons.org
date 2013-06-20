@@ -24,7 +24,7 @@
 // Colors used in the sample global.styles. You can use these to recolor many
 // elements such as forms, tables, tabs etc.
 //
-$red:          #ed1c24; // cat_man_do red
+$red:          #15ACE8; // cat_man_do red
 $blue:         #4690d7; // cat_man_do blue
 $dark:         #164e83; // dark blue
 $whisper:      #ECF4FB; // cityscape
@@ -54,10 +54,10 @@ $primary_task_active: $page;
 // These font stacks are an exact copy of the stacks found in AT Cores
 // theme settings for web safe fonts.
 //
-$fat-header:                  'governorregular', Arial, Helvetica, sans-serif;
+$fat-header:                  'Montserrat', Arial, Helvetica, sans-serif;
 $thin-header:                 'Montserrat', Arial, Helvetica, sans-serif;
-$sans-serif-small:            'Helvetica Neue', Arial, Helvetica, sans-serif;
-$sans-serif-large:            Verdana, Geneva, 'DejaVu Sans', Arial, Helvetica, sans-serif;
+$sans-serif-small:            'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$sans-serif-large:            'Montserrat', Verdana, Geneva, 'DejaVu Sans', Arial, Helvetica, sans-serif;
 $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
 $calibri-candara:             Calibri, Candara, Arial, Helvetica, sans-serif;
 $serif-small:                 Garamond, Perpetua, 'Times New Roman', serif;
@@ -196,3 +196,14 @@ $gutter-width: 10px;
     }
   }
 }
+
+
+
+
+$title-bar-color: #f3e514;
+$grey-color: #dbdbdb;
+
+$block-height: 40px;
+$block-padding: 5px;
+
+

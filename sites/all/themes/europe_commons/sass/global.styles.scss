@@ -31,7 +31,7 @@
  *   Base
  * ========================================================================== */
 
-/* 
+/*
  * To preserve theme settings never apply font properties to the HTML element.
  * This is critically important if you are using the Responsive JavaScript
  * feature as this relies on being able to set a pseudo font family on the HTML
@@ -214,7 +214,7 @@ var {
   margin:0;
 }
 body.sidebar-second #main-content {
-  padding-right:20px;  
+  padding-right:20px;
 }
 .page-event #main-content {
   background: none;
@@ -636,9 +636,9 @@ a {
     display: block;
     white-space: nowrap;
     padding: 0 10px;
-    
+
     &:visited {}
-    
+
     &:hover,
     &:focus {
       text-decoration: none;
@@ -651,7 +651,7 @@ a {
 }
 
 #block-menu-menu-social-links ul.menu {
-  .menu-item-881 a { 
+  .menu-item-881 a {
     text-indent: -9999px;
     width:40px;
     height:40px;
@@ -662,7 +662,7 @@ a {
   .menu-item-881 a:hover {
     background: $red url(images/social.png) no-repeat -55px 50%;
   }
-  .menu-item-882 a { 
+  .menu-item-882 a {
     text-indent: -9999px;
     width:40px;
     height:40px;
@@ -673,7 +673,7 @@ a {
   .menu-item-882 a:hover {
     background: $red url(images/social.png) no-repeat -5px 50%;
   }
-  .menu-item-883 a { 
+  .menu-item-883 a {
     text-indent: -9999px;
     width:40px;
     height:40px;
@@ -684,7 +684,7 @@ a {
   .menu-item-883 a:hover {
     background: $red url(images/social.png) no-repeat -105px 50%;
   }
-  
+
 }
 
 /* =============================================================================
@@ -835,10 +835,10 @@ ul.menu {
 
 /* If li.content exists it's a problem, so reset the padding */
 .block .menu li.content {
-  padding: 0;   
+  padding: 0;
 }
 
- 
+
 /* =============================================================================
  *   Book navigation menu
  * ========================================================================== */
@@ -856,7 +856,7 @@ ul.menu {
     min-width: 2em;
     white-space: nowrap;
   }
-  
+
   .menu {
     margin-left: 0;
   }
@@ -1263,7 +1263,7 @@ ul.action-links {
 
 
 /*
- * Image Alignment Theme Settings - included here so you can easily override 
+ * Image Alignment Theme Settings - included here so you can easily override
  */
 
 /*
@@ -1391,8 +1391,17 @@ ul.action-links {
  */
 #block-block-2 {
   @include zen-grid-container;
-  text-align: center;
-  padding:20px 0;
+  background: $title-bar-color;
+  height: $block-height;
+  h2 {
+    padding-top: $block-padding;
+  }
+  // text-align: center;
+  // padding:20px 0;
+  margin-top: 10px;
+  .block-title {
+    font-size: 16pt;
+  }
   .option1{
     @include zen-grid-item(3, 1);
     background:url("images/plan.png") no-repeat scroll 50% 0 transparent;
@@ -1410,22 +1419,23 @@ ul.action-links {
     background:url("images/participate.png") no-repeat scroll 50% 0 transparent;
   }
   .block-content {
-    a {
-      color:$blue;
-      display: block;
-      padding:70px 10px 5px;
-      div {
-        margin: 0.5em 0.5em 0;
-        white-space: nowrap;
-        font-size: 1.7em;
-        font-family: $fat-header;
-      }
-    }
-    a:hover,
-    a h2:hover {
-      color:$red;
-      text-decoration: none;
-    }
+    display: none;
+    // a {
+    //   color:$blue;
+    //   display: block;
+    //   padding:70px 10px 5px;
+    //   div {
+    //     margin: 0.5em 0.5em 0;
+    //     white-space: nowrap;
+    //     font-size: 1.7em;
+    //     font-family: $fat-header;
+    //   }
+    // }
+    // a:hover,
+    // a h2:hover {
+    //   color:$red;
+    //   text-decoration: none;
+    // }
   }
 }
 
@@ -1569,7 +1579,7 @@ ul.action-links {
         margin:0;
         padding:0;
       }
-    }    
+    }
   }
 }
 
@@ -1748,7 +1758,7 @@ ul.action-links {
     font-size: .9em;
     padding: 3px 0;
     color:$blue;
-    
+
     .username {}
 
     time {}
@@ -1763,7 +1773,7 @@ ul.action-links {
     }
   }
 
-  
+
   ul.links {
 
     li {}
@@ -1823,7 +1833,7 @@ ul.action-links {
   .node-content {
     .field-items {
        margin:10px 0;
-    }  
+    }
   }
 }
 
@@ -1935,7 +1945,7 @@ ul.action-links {
 /*
  * Wrapper for a form element (or group of form elements) and its label
  */
-.form-item { 
+.form-item {
 
   input.error,
   textarea.error,
@@ -1947,7 +1957,7 @@ ul.action-links {
     font-weight: 700;
   }
 
-  label.option { 
+  label.option {
   }
 
   .description {
@@ -2039,14 +2049,14 @@ legend {
 /*
  * Tips for Drupal's input formats
  */
-.tips { 
+.tips {
 }
 
 
 /*
  * Buttons used by contrib modules like Media
  */
-a.button { 
+a.button {
   @include appearance(button);
 }
 
@@ -2072,7 +2082,7 @@ table {
   &.sticky-header {
     z-index: 10;
   }
-  
+
 }
 
 .view-challenge-list table {
@@ -2391,13 +2401,13 @@ tr.error {
 #block-views-sponsors-block-block {
   margin-top:1em;
   h2.block-title {
-    background:$whisper;
-    color:$blue;
-    text-shadow: .5px .5px 0 #fff;
-    font-family: $sans-serif-arial-helvetica;
+    background: $grey-color;
+    color: #000;
+    // text-shadow: .5px .5px 0 #fff;
+    // font-family: $sans-serif-arial-helvetica;
     font-size: 1em !important;
     margin:0 0 1em;
-    text-align:center;
+    // text-align:center;
   }
 }
 #block-views-sponsors-block-block-2 {
@@ -2529,11 +2539,11 @@ tr.error {
     display: block;
   }
   .stat-participants {
-    
+
   }
 }
 #block-views-homepage-latest-block-2 {
-  @include zen-grid-item(4, 5);
+  @include zen-grid-item(8, 1);
   .views-field-title a {
     font-size:1.4em;
     margin:0 0 .5em 0;
@@ -2724,7 +2734,7 @@ tr.error {
   }
 }
 
-/* Sign up 
+/* Sign up
 
 
 #webform-client-form-19 {
@@ -2765,3 +2775,154 @@ tr.error {
   }
 }
 */
+
+
+
+//----------------------------------------------------------------------------
+// Europe Commons custom changes
+//
+
+
+
+.region-header {
+  float: right;
+  block: inline;
+  margin-top: 25px;
+}
+
+#branding {
+  block: inline;
+  float: left;
+  #logo {
+    block: inline;
+    padding: 0px;
+  }
+}
+
+#views-exposed-form-search-page .views-exposed-form .views-exposed-widget {
+  .form-submit {
+    margin-top: 0em;
+    background: transparent url(../images/Search_Yellow.png) no-repeat left top;
+    text-indent: -9999px;
+    padding-right: 30px;
+  }
+  .form-item input.form-text, .form-item textarea {
+    border: none;
+    background: $grey-color;
+  }
+  padding: 0 0 0 0;
+}
+
+#edit-query {
+  height: 29px;
+}
+
+#secondary-menu-bar {
+  float: right;
+}
+
+#menu-bar {
+  background: none repeat scroll 0 0 #f3e514;
+  nav ul.menu a {
+    text-transform: none;
+    color: #000;
+  }
+}
+
+
+.block {
+  .block-title {
+    // background: $title-bar-color;
+    font-size: 18pt;
+    color: #000;
+  }
+}
+
+.region-two-50-second {
+  float: right;
+  padding-top: 120px;
+  a.button {
+    margin: 40px 0 0 0;
+    padding: 100px 20px 50px 20px;
+    // padding-top: 30px;
+    height: $block-height;
+    // background-image: url(../images/Add_App_Y.png);
+    // background: url(../images/Add_App_Y.png);
+    -webkit-appearance: none;
+  }
+  a:nth-child(1) {
+    // background-image: url(../images/Add_App_Y.png);
+    background: transparent url(../images/Add_App_Y.png) no-repeat center top;
+  }
+  a:nth-child(1):hover {
+    background: transparent url(../images/Add_App_G.png) no-repeat center top;
+  }
+  a:nth-child(2) {
+    background: transparent url(../images/Add_Org_Y.png) no-repeat center top;
+  }
+  a:nth-child(2):hover {
+    background: transparent url(../images/Add_Org_G.png) no-repeat center top;
+  }
+  a:nth-child(3) {
+    background: transparent url(../images/write_story_Y.png) no-repeat center top;
+  }
+  a:nth-child(3):hover {
+    background: transparent url(../images/write_story_G.png) no-repeat center top;
+  }
+}
+
+#block-views-sponsors-block-block {
+
+  h2.block-title {
+    height: $block-height;
+    // padding-top: $block-padding;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+}
+
+#welcome-msg {
+  font-size: 28pt;
+  margin: 0 0 0.7em 0;
+  line-height: 1.1em;
+}
+
+#welcome-msg-slogan {
+  font-size: 15pt;
+  // margin: 0 0 0.7em 0;
+  // line-height: 1.1em;
+}
+
+.views-field-field-image {
+  float: left;
+  display: inline;
+  margin-right: 10px;
+}
+
+.view-homepage-latest .views-row {
+  margin-bottom: 10px;
+}
+
+// ----------------------------------------------------------------------------
+// Highlight block
+
+div.view-highlighted .views-slideshow-overlay .slideshow-title,
+div.view-highlighted .views-slideshow-overlay .slideshow-text {
+  background-color: #FFFFFF;
+  color: #000;
+  display: inline-block;
+  padding: 0 5px 0 5px;
+  font-size: 15pt;
+  a, a:link, a:active, a:visited {
+    color: #000;
+  }
+}
+
+div.view-highlighted .views-slideshow-overlay .slideshow-title {
+  font-size: 20pt;
+}
+
+// div.view-highlighted .views-slideshow-overlay a, div.view-highlighted .views-slideshow-overlay a:link,
+// div.view-highlighted .views-slideshow-overlay a:active, div.view-highlighted .views-slideshow-overlay a:visited {
+//   color: #000;
+// }
