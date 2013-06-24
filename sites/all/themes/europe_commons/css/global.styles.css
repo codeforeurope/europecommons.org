@@ -9,7 +9,7 @@ body { font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif
 #page { max-width: 960px; }
 
 /* ============================================================================= HTML Elements ========================================================================== */
-#page-title { font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal !important; text-transform: uppercase; color: #4690d7; }
+#page-title { font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal !important; color: #4690d7; }
 
 .front #page-title { display: none; }
 
@@ -30,8 +30,6 @@ pre, code, tt, samp, kbd, var { font-family: Consolas, Monaco, "Courier New", Co
 /* Wraps all header elements - branding and .region-header */
 /* Wraps the sidebars the content column */
 /* Main content column wrapper */
-#content-column { background: transparent url(images/cityscape.png) no-repeat 50% 95%; }
-
 /* Wraps the main-content-header, the content region and feed-icons. Use this wrapper to style the entire main content column */
 #main-content { *position: relative; *zoom: 1; margin: 0; }
 #main-content:before, #main-content:after { content: ""; display: table; }
@@ -79,7 +77,7 @@ body.sidebar-second #main-content { padding-right: 20px; }
 /* ============================================================================= Page content header ========================================================================== */
 /* Main content header wraps the page title, tabs and actions links */
 /* The main page title (h1) */
-#page-title { margin: 0; text-transform: uppercase; }
+#page-title { margin: 0; }
 
 /* ============================================================================= Misc Global Styles ========================================================================== */
 /* Feed icons */
@@ -119,8 +117,16 @@ a:hover, a:focus { text-decoration: underline; color: #4690d7; }
 /* ============================================================================= Primary, Secondary and Menu Bar region menus ========================================================================== */
 /* Use one of the following id's for granular control: - #menu-bar (menu bar region) - #primary-menu (main menu) - #secondary-menu (secondary/user menu) You can target all of these with .nav or div[id$="menu-bar"] */
 #menu-bar { height: 40px; line-height: 40px; background: #4690d7; }
-#menu-bar nav ul.menu a { color: #fff; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal !important; text-transform: uppercase; font-size: 1.2em; }
-#menu-bar nav ul.menu a:hover { background: #15ace8; -webkit-box-shadow: #990000 0 0 10px inset; -moz-box-shadow: #990000 0 0 10px inset; box-shadow: #990000 0 0 10px inset; }
+#menu-bar nav ul.menu li { margin-left: 5px; }
+#menu-bar nav ul.menu li.menu-mlid-571 { background: transparent url(../images/home_dwn.png) no-repeat left center; }
+#menu-bar nav ul.menu li.menu-mlid-571:hover { background: transparent url(../images/home_up.png) no-repeat left center; }
+#menu-bar nav ul.menu li.menu-mlid-673 { background: transparent url(../images/app_dwn.png) no-repeat left center; }
+#menu-bar nav ul.menu li.menu-mlid-673:hover { background: transparent url(../images/app_up.png) no-repeat left center; }
+#menu-bar nav ul.menu li.menu-mlid-672 { background: transparent url(../images/org_dwn.png) no-repeat left center; }
+#menu-bar nav ul.menu li.menu-mlid-672:hover { background: transparent url(../images/org_up.png) no-repeat left center; }
+#menu-bar nav ul.menu li.menu-mlid-837 { background: transparent url(../images/about_dwn.png) no-repeat left center; }
+#menu-bar nav ul.menu li.menu-mlid-837:hover { background: transparent url(../images/about_up.png) no-repeat left center; }
+#menu-bar nav ul.menu a { color: #fff; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal !important; font-size: 1.2em; padding-left: 23px; }
 #menu-bar #block-system-main-menu { margin: 0; float: left; }
 #menu-bar #block-menu-menu-social-links { float: right; margin: 0; }
 
@@ -346,14 +352,15 @@ ul.action-links { margin: 20px 0 0; list-style: none; }
 /* ============================================================================= Node Styling ========================================================================== */
 .node { margin-bottom: 20px; }
 .node .node-title { margin: 0; }
-.node .submitted { font-size: .9em; padding: 3px 0; color: #4690d7; }
-.node .node-content h2.field-label { font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 1.5em; text-transform: uppercase; }
+.node .submitted { font-size: .9em; padding: 3px 0; color: #b6b6b6; }
+.node .submitted .username { color: #b6b6b6; }
+.node .node-content h2.field-label { font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 1.5em; }
 
 .node-type-event #content-column { min-height: 400px; }
 
 /* All nodes are given a node-FOO class that describes the type of content that it is. If you create a new content type called "my-custom-type", it will receive a "node-my-custom-type" class. */
 .node-event .field-name-field-url h2 { margin: 0; }
-.node-event .field-name-field-url .field-items { font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.5em; text-transform: uppercase; margin-left: .5em; }
+.node-event .field-name-field-url .field-items { font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.5em; margin-left: .5em; }
 
 .node-organizer .node-content .field-items { margin: 10px 0; }
 
@@ -393,7 +400,7 @@ ul.action-links { margin: 20px 0 0; list-style: none; }
 .marker, .form-required { color: #cc0000; }
 
 /* The submit button */
-.form-submit, button { border: none; background: #4690d7; color: #fff; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 21px; padding: 4px 10px 2px; text-transform: uppercase; letter-spacing: 1px; margin-right: .5em; }
+.form-submit, button { border: none; background: #4690d7; color: #fff; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 21px; padding: 4px 10px 2px; letter-spacing: 1px; margin-right: .5em; }
 
 .form-submit:hover, button:hover { background: #164e83; }
 
@@ -402,7 +409,7 @@ ul.action-links { margin: 20px 0 0; list-style: none; }
 /* Define consistent borders */
 fieldset { border: 1px solid #d1e9fc; margin: 2em 0 0; position: relative; background: rgba(236, 244, 251, 0.3); }
 
-legend { background: #8ad8f7; padding: 0 10px; color: #fff; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.5em; line-height: 1.1em; text-transform: uppercase; letter-spacing: .5px; text-shadow: 1px 1px 0 #4690d7; position: absolute; top: -10px; left: 10px; }
+legend { background: #8ad8f7; padding: 0 10px; color: #fff; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.5em; line-height: 1.1em; letter-spacing: .5px; text-shadow: 1px 1px 0 #4690d7; position: absolute; top: -10px; left: 10px; }
 
 /* Tips for Drupal's input formats */
 /* Buttons used by contrib modules like Media */
@@ -418,21 +425,19 @@ table.sticky-header { z-index: 10; }
 .view-challenge-list table { -webkit-box-shadow: 0 0 10px #999999; -moz-box-shadow: 0 0 10px #999999; box-shadow: 0 0 10px #999999; }
 .view-challenge-list table td.views-field-field-performer { min-width: 150px; }
 
-table, thead, tbody, tr, th, td { border-color: #d1e9fc; }
+table, thead, tbody, tr, th, td { border: none; }
 
 table, td, th { vertical-align: middle; }
 
 caption, th, td { text-align: left; }
 
-th, thead tr { background-color: #d1e9fc; color: #164e83; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.25em; font-weight: normal; text-transform: uppercase; border-bottom: 2px solid #8ad8f7; white-space: nowrap; }
+th, thead tr { background-color: #d1e9fc; color: #164e83; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.25em; font-weight: normal; white-space: nowrap; }
 
 td, th { border-bottom: 0; margin: 0; padding: 2px 7px; }
 
-tbody tr { border-top: 1px solid #d1e9fc; }
-
 tr { /* Table row striping */ }
 tr.odd { background: white; background: rgba(255, 255, 255, 0.4); }
-tr.info, tr.even, tr:nth-child(2n+2) { border-bottom: 0; background-color: whitesmoke; background: rgba(236, 244, 251, 0.4); }
+tr.info, tr.even, tr:nth-child(2n+2) { border-bottom: 0; background-color: whitesmoke; }
 tr.odd td.active { background-color: #eeeeee; }
 tr.even td.active { background-color: #ebebeb; }
 
@@ -550,7 +555,7 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 
 .view-events-list table { margin-left: 10px; }
 .view-events-list td { width: 50%; }
-.view-events-list caption { font-family: "Montserrat", Arial, Helvetica, sans-serif; text-transform: uppercase; font-size: 1.5em; color: #164e83; margin-left: -10px; }
+.view-events-list caption { font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.5em; color: #164e83; margin-left: -10px; }
 
 .view-dataset-list caption { background: #15ace8; }
 .view-dataset-list caption a { padding: 2px 25px 2px 10px; color: #fff; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.1em; }
@@ -601,7 +606,7 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 .region-two-50-second a:nth-child(3) { background: transparent url(../images/Write_story_Y.png) no-repeat center top; }
 .region-two-50-second a:nth-child(3):hover { background: transparent url(../images/Write_story_G.png) no-repeat center top; }
 
-#block-views-sponsors-block-block h2.block-title { height: 40px; padding-top: 10px; padding-left: 10px; }
+#block-views-sponsors-block-block h2.block-title { height: 30px; padding-top: 10px; padding-left: 10px; }
 
 #welcome-msg { font-size: 28pt; margin: 0 0 0.7em 0; line-height: 1.1em; }
 
@@ -615,3 +620,8 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title, div.view-highlig
 div.view-highlighted .views-slideshow-overlay .slideshow-title a, div.view-highlighted .views-slideshow-overlay .slideshow-title a:link, div.view-highlighted .views-slideshow-overlay .slideshow-title a:active, div.view-highlighted .views-slideshow-overlay .slideshow-title a:visited, div.view-highlighted .views-slideshow-overlay .slideshow-text a, div.view-highlighted .views-slideshow-overlay .slideshow-text a:link, div.view-highlighted .views-slideshow-overlay .slideshow-text a:active, div.view-highlighted .views-slideshow-overlay .slideshow-text a:visited { color: #000; }
 
 div.view-highlighted .views-slideshow-overlay .slideshow-title { font-size: 20pt; }
+
+#block-panels-mini-blog > h2, #block-panels-mini-what-s-happening > h2 { background-color: #f3e514; padding-left: 5px; margin-bottom: 5px; }
+
+.view-sponsors-block tr { /* Table row striping */ }
+.view-sponsors-block tr.info, .view-sponsors-block tr.even, .view-sponsors-block tr:nth-child(2n+2) { background-color: rgba(255, 255, 255, 0.4); }

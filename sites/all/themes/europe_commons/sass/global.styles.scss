@@ -59,7 +59,7 @@ body {
 #page-title {
     font-family: $fat-header;
     font-weight: normal !important;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color:$blue;
 }
 .front #page-title {
@@ -202,7 +202,7 @@ var {
  * Main content column wrapper
  */
 #content-column {
-  background:transparent url(images/cityscape.png) no-repeat 50% 95%;
+  // background:transparent url(images/cityscape.png) no-repeat 50% 95%;
 }
 
 
@@ -405,7 +405,7 @@ body.sidebar-second #main-content {
  */
 #page-title {
   margin: 0;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 
@@ -591,16 +591,45 @@ a {
   line-height: 40px;
   background: $blue;
   nav ul.menu {
+    li {
+      margin-left: 5px;
+    }
+    li.menu-mlid-571 {
+      background: transparent url(../images/home_dwn.png) no-repeat left center;
+    }
+    li.menu-mlid-571:hover {
+      background: transparent url(../images/home_up.png) no-repeat left center;
+    }
+    li.menu-mlid-673 {
+      background: transparent url(../images/app_dwn.png) no-repeat left center;
+    }
+    li.menu-mlid-673:hover {
+      background: transparent url(../images/app_up.png) no-repeat left center;
+    }
+    li.menu-mlid-672 {
+      background: transparent url(../images/org_dwn.png) no-repeat left center;
+    }
+    li.menu-mlid-672:hover {
+      background: transparent url(../images/org_up.png) no-repeat left center;
+    }
+    li.menu-mlid-837 {
+      background: transparent url(../images/about_dwn.png) no-repeat left center;
+    }
+    li.menu-mlid-837:hover {
+      background: transparent url(../images/about_up.png) no-repeat left center;
+    }
     a {
       color:#fff;
       font-family: $fat-header;
       font-weight: normal !important;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       font-size:1.2em;
+
+      padding-left: 23px;
     }
     a:hover {
-      background: $red;
-      @include box-shadow(#900 0 0 10px inset);
+      // background: $red;
+      // @include box-shadow(#900 0 0 10px inset);
     }
   }
   #block-system-main-menu {
@@ -1757,9 +1786,11 @@ ul.action-links {
   .submitted {
     font-size: .9em;
     padding: 3px 0;
-    color:$blue;
+    color: #b6b6b6;
 
-    .username {}
+    .username {
+      color: #b6b6b6;
+    }
 
     time {}
   }
@@ -1769,7 +1800,7 @@ ul.action-links {
       font-family: $thin-header;
       font-weight: normal;
       font-size: 1.5em;
-      text-transform: uppercase;
+      // text-transform: uppercase;
     }
   }
 
@@ -1821,7 +1852,7 @@ ul.action-links {
     .field-items {
       font-family: $thin-header;
       font-size: 1.5em;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       margin-left:.5em;
     }
   }
@@ -2006,7 +2037,7 @@ ul.action-links {
   font-weight: normal;
   font-size:21px;
   padding: 4px 10px 2px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   letter-spacing: 1px;
   margin-right:.5em;
 }
@@ -2039,7 +2070,7 @@ legend {
   font-family: $thin-header;
   font-size: 1.5em;
   line-height: 1.1em;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   letter-spacing: .5px;
   text-shadow: 1px 1px 0 $blue;
   position: absolute;
@@ -2098,7 +2129,8 @@ tbody,
 tr,
 th,
 td {
-  border-color: $border;
+  // border-color: $border;
+  border: none;
 }
 
 
@@ -2122,8 +2154,8 @@ thead tr {
   font-family: $thin-header;
   font-size: 1.25em;
   font-weight: normal;
-  text-transform: uppercase;
-  border-bottom:2px solid $skyblue;
+  // text-transform: uppercase;
+  // border-bottom:2px solid $skyblue;
   white-space: nowrap;
 }
 
@@ -2140,7 +2172,7 @@ tbody {}
 
 
 tbody tr {
-  border-top: 1px solid $border;
+  // border-top: 1px solid $border;
 }
 
 
@@ -2157,7 +2189,7 @@ tr {
   &:nth-child(2n+2)  {
     border-bottom: 0;
     background-color: $ultralight;
-    background: rgba(236, 244, 251, 0.4);
+    // background: rgba(236, 244, 251, 0.4);
   }
 
   &.drag {}
@@ -2671,7 +2703,7 @@ tr.error {
   }
   caption {
     font-family: $thin-header;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-size:1.5em;
     color:$dark;
     margin-left:-10px;
@@ -2822,7 +2854,7 @@ tr.error {
 }
 
 #menu-bar {
-  background: none repeat scroll 0 0 #f3e514;
+  background: none repeat scroll 0 0 $title-bar-color;
   nav ul.menu a {
     text-transform: none;
     color: #000;
@@ -2874,7 +2906,7 @@ tr.error {
 #block-views-sponsors-block-block {
 
   h2.block-title {
-    height: $block-height;
+    height: 30px;
     // padding-top: $block-padding;
     padding-top: 10px;
     padding-left: 10px;
@@ -2926,3 +2958,36 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title {
 // div.view-highlighted .views-slideshow-overlay a:active, div.view-highlighted .views-slideshow-overlay a:visited {
 //   color: #000;
 // }
+//
+//
+
+// ----------------------------------------------------------------------------
+// Homepage section blocks
+//
+#block-panels-mini-blog > h2,
+#block-panels-mini-what-s-happening > h2 {
+  background-color: $title-bar-color;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+
+
+// ----------------------------------------------------------------------------
+// Sponsors block
+//
+.view-sponsors-block tr {
+
+  // &.odd {
+  //   background: $page;
+  //   background: rgba(255, 255, 255, 0.4);
+  // }
+
+  /* Table row striping */
+  &.info,
+  &.even,
+  &:nth-child(2n+2)  {
+    background-color: rgba(255, 255, 255, 0.4);
+    // background: rgba(236, 244, 251, 0.4);
+  }
+}
+
