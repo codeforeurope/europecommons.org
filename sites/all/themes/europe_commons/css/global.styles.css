@@ -128,6 +128,8 @@ a:hover, a:focus { text-decoration: underline; color: #4690d7; }
 #menu-bar nav ul.menu li.menu-mlid-882:hover { background: transparent url(../images/blog_up.png) no-repeat left center; }
 #menu-bar nav ul.menu li.menu-mlid-837 { background: transparent url(../images/about_dwn.png) no-repeat left center; }
 #menu-bar nav ul.menu li.menu-mlid-837:hover { background: transparent url(../images/about_up.png) no-repeat left center; }
+#menu-bar nav ul.menu li.menu-mlid-860 { background: transparent url(../images/sign_up.png) no-repeat left center; }
+#menu-bar nav ul.menu li.menu-mlid-860:hover { background: transparent url(../images/sign_dwn.png) no-repeat left center; }
 #menu-bar nav ul.menu a { color: #fff; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal !important; font-size: 1.2em; padding-left: 23px; }
 #menu-bar #block-system-main-menu { margin: 0; float: left; }
 #menu-bar #block-menu-menu-social-links { float: right; margin: 0; }
