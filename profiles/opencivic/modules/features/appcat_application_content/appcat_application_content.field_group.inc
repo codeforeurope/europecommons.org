@@ -198,12 +198,12 @@ function appcat_application_content_field_group_info() {
     'label' => 'Main',
     'weight' => '1',
     'children' => array(
-      0 => 'group_basic',
-      1 => 'group_categories',
-      2 => 'group_deployment',
-      3 => 'group_features',
-      4 => 'group_host',
-      5 => 'group_media',
+      0 => 'group_media',
+      1 => 'group_basic',
+      2 => 'group_categories',
+      3 => 'group_deployment',
+      4 => 'group_features',
+      5 => 'group_host',
       6 => 'group_misc',
     ),
     'format_type' => 'tabs',
@@ -251,22 +251,21 @@ function appcat_application_content_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
-    'label' => 'Screenshots & videos',
+    'label' => 'Media',
     'weight' => '34',
     'children' => array(
-      0 => 'field_screenshot',
-      1 => 'field_video',
-      2 => 'field_file_attachments',
+      0 => 'field_file_attachments',
+      1 => 'field_screenshot',
+      2 => 'field_video',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Screenshots & videos',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => '',
-        'description' => '',
-      ),
       'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
     ),
   );
   $export['group_media|node|application|form'] = $field_group;
@@ -297,36 +296,6 @@ function appcat_application_content_field_group_info() {
     ),
   );
   $export['group_misc|node|application|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_screenshots|node|application|default';
-  $field_group->group_name = 'group_screenshots';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'application';
-  $field_group->mode = 'default';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Screenshots',
-    'weight' => '25',
-    'children' => array(
-      0 => 'field_screenshot',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'formatter' => 'collapsible',
-      'instance_settings' => array(
-        'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => '',
-      ),
-    ),
-  );
-  $export['group_screenshots|node|application|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
