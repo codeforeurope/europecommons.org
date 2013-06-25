@@ -45,7 +45,7 @@ html {
 
 body {
   font-family: $sans-serif-small; // Set from _custom.scss font variables
-  font-size: 87.5%;
+  font-size: 80%;
 }
 
 #page {
@@ -611,6 +611,12 @@ a {
     }
     li.menu-mlid-672:hover {
       background: transparent url(../images/org_up.png) no-repeat left center;
+    }
+    li.menu-mlid-882 {
+      background: transparent url(../images/blog_dwn.png) no-repeat left center;
+    }
+    li.menu-mlid-882:hover {
+      background: transparent url(../images/blog_up.png) no-repeat left center;
     }
     li.menu-mlid-837 {
       background: transparent url(../images/about_dwn.png) no-repeat left center;
@@ -2932,7 +2938,7 @@ tr.error {
 }
 
 .view-homepage-latest .views-row {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 // ----------------------------------------------------------------------------
@@ -2990,4 +2996,27 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title {
     // background: rgba(236, 244, 251, 0.4);
   }
 }
+
+
+// ----------------------------------------------------------------------------
+// Blog list
+//
+.view-stories .views-field-title {
+  font-size: 160%;
+}
+
+.views-field-title {
+  font-size: 120%;
+}
+
+
+// ----------------------------------------------------------------------------
+// App details
+//
+.node-content .field-name-field-image {
+  float: left;
+  padding-right: 15px;
+}
+
+
 
