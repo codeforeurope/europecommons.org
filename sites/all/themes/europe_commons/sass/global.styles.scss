@@ -2018,7 +2018,12 @@ ul.action-links {
     border:1px solid $skyblue;
   }
   select {
-    border:1px solid $skyblue;
+    border: none;
+    background: $grey-color;
+    height: 25px;
+    vertical-align: middle;
+    font-size: 120%;
+    // border:1px solid $skyblue;
     option {
       padding: 2px;
     }
@@ -2043,15 +2048,16 @@ ul.action-links {
  */
 .form-submit, button {
   border:none;
-  background: $blue;
-  color:#fff;
+  background: $title-bar-color;
+  color:#000;
   font-family:$thin-header;
   font-weight: normal;
-  font-size:21px;
-  padding: 4px 10px 2px;
-  // text-transform: uppercase;
+  font-size: 130%;
+  padding: 2px 0px 2px;
+  margin-top: 1.3em;
   letter-spacing: 1px;
   margin-right:.5em;
+  width: 100px;
 }
 .form-submit:hover,
 button:hover {
@@ -2161,13 +2167,13 @@ td {
 
 th,
 thead tr {
-  background-color: $border;
-  color: $dark;
+  background-color: #fff;
+  color: #000;
   font-family: $thin-header;
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-weight: normal;
-  // text-transform: uppercase;
-  // border-bottom:2px solid $skyblue;
+  border-top: 2px solid $grey-color;
+  border-bottom: 2px solid $grey-color;
   white-space: nowrap;
 }
 
@@ -2641,51 +2647,59 @@ tr.error {
     margin-top:5px;
   }
 }
+
+#views-exposed-form-application-list-page,
 #views-exposed-form-organization-list-page,
 #views-exposed-form-events-list-page {
-  .views-exposed-form {
-    background: #eee;
-    @include border-radius(8px);
-    border:1px solid #ccc;
-    display:inline-block;
-    font-size: .94em;
-    .views-exposed-widgets {
-      margin-bottom:0;
-    }
-    .views-exposed-widget {
-      padding:4px 1em;
-      label {
-        color:#666;
-        font-weight: normal;
-        float:left;
-        margin:3px 5px;
-        text-shadow: 1px 1px 1px #fff;
-      }
-      .views-widget {
-        float:left;
-      }
-      .form-item select {
-        border:1px solid #ccc;
-      }
-      .form-submit {
-        margin-top: 2px;
-        font-family: $sans-serif-large;
-        font-size: 1em;
-        text-transform: none;
-        color:#666;
-        text-shadow: 1px 1px 1px #fff;
-        padding: 2px 8px;
-        @include background-image(linear-gradient(#cccccc, #eeeeee, #dadada));
-        border:1px solid #ccc;
-        letter-spacing: 0;
-      }
-      .form-submit:hover {
-        background:$dark;
-        color:#fff;
-        text-shadow: none;
-      }
-    }
+  #edit-civic {
+    width: 300px;
   }
+  .views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: 20px;
+  }
+  // .views-exposed-form {
+  //   background: #eee;
+  //   @include border-radius(8px);
+  //   border:1px solid #ccc;
+  //   display:inline-block;
+  //   font-size: .94em;
+  //   .views-exposed-widgets {
+  //     margin-bottom:0;
+  //   }
+  //   .views-exposed-widget {
+  //     padding:4px 1em;
+  //     label {
+  //       color:#666;
+  //       font-weight: normal;
+  //       float:left;
+  //       margin:3px 5px;
+  //       text-shadow: 1px 1px 1px #fff;
+  //     }
+  //     .views-widget {
+  //       float:left;
+  //     }
+  //     .form-item select {
+  //       border:1px solid #ccc;
+  //     }
+  //     .form-submit {
+  //       margin-top: 2px;
+  //       font-family: $sans-serif-large;
+  //       font-size: 1em;
+  //       text-transform: none;
+  //       color:#666;
+  //       text-shadow: 1px 1px 1px #fff;
+  //       padding: 2px 8px;
+  //       @include background-image(linear-gradient(#cccccc, #eeeeee, #dadada));
+  //       border:1px solid #ccc;
+  //       letter-spacing: 0;
+  //     }
+  //     .form-submit:hover {
+  //       background:$dark;
+  //       color:#fff;
+  //       text-shadow: none;
+  //     }
+  //   }
+  // }
 }
 
 .view-event-sponsors-block .view-content {
@@ -2849,12 +2863,14 @@ tr.error {
     background: transparent url(../images/Search_Yellow.png) no-repeat left top;
     text-indent: -9999px;
     padding-right: 30px;
+    font-size: 200%;
   }
   .form-item input.form-text, .form-item textarea {
     border: none;
     background: $grey-color;
   }
   padding: 0 0 0 0;
+
 }
 
 #edit-query {
@@ -3018,6 +3034,15 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title {
 
 .views-field-title {
   font-size: 120%;
+}
+
+
+// ----------------------------------------------------------------------------
+// App / orgs lists
+//
+.form-select {
+  border: none;
+  background: $grey-color;
 }
 
 

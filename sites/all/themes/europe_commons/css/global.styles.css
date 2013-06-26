@@ -396,7 +396,7 @@ ul.action-links { margin: 20px 0 0; list-style: none; }
 .form-item .form-type-checkbox label { font-weight: normal; }
 .form-item input.form-checkbox, .form-item input.form-radio { margin: 0 0 3px 1em; }
 .form-item input.form-text, .form-item textarea { border: 1px solid #8ad8f7; }
-.form-item select { border: 1px solid #8ad8f7; }
+.form-item select { border: none; background: #dbdbdb; height: 25px; vertical-align: middle; font-size: 120%; }
 .form-item select option { padding: 2px; }
 .form-item select option:focus { background: #4690d7 !important; }
 
@@ -404,7 +404,7 @@ ul.action-links { margin: 20px 0 0; list-style: none; }
 .marker, .form-required { color: #cc0000; }
 
 /* The submit button */
-.form-submit, button { border: none; background: #4690d7; color: #fff; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 21px; padding: 4px 10px 2px; letter-spacing: 1px; margin-right: .5em; }
+.form-submit, button { border: none; background: #f3e514; color: #000; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 130%; padding: 2px 0px 2px; margin-top: 1.3em; letter-spacing: 1px; margin-right: .5em; width: 100px; }
 
 .form-submit:hover, button:hover { background: #164e83; }
 
@@ -435,7 +435,7 @@ table, td, th { vertical-align: middle; }
 
 caption, th, td { text-align: left; }
 
-th, thead tr { background-color: #d1e9fc; color: #164e83; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.25em; font-weight: normal; white-space: nowrap; }
+th, thead tr { background-color: #fff; color: #000; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.1em; font-weight: normal; border-top: 2px solid #dbdbdb; border-bottom: 2px solid #dbdbdb; white-space: nowrap; }
 
 td, th { border-bottom: 0; margin: 0; padding: 2px 7px; }
 
@@ -542,14 +542,8 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 .view-blog .comment-add a:hover { background: transparent url(images/blog-icon.png) no-repeat 0 -63px; }
 .view-blog ul.links.inline { line-height: 20px; margin-top: 5px; }
 
-#views-exposed-form-organization-list-page .views-exposed-form, #views-exposed-form-events-list-page .views-exposed-form { background: #eee; -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; border: 1px solid #ccc; display: inline-block; font-size: .94em; }
-#views-exposed-form-organization-list-page .views-exposed-form .views-exposed-widgets, #views-exposed-form-events-list-page .views-exposed-form .views-exposed-widgets { margin-bottom: 0; }
-#views-exposed-form-organization-list-page .views-exposed-form .views-exposed-widget, #views-exposed-form-events-list-page .views-exposed-form .views-exposed-widget { padding: 4px 1em; }
-#views-exposed-form-organization-list-page .views-exposed-form .views-exposed-widget label, #views-exposed-form-events-list-page .views-exposed-form .views-exposed-widget label { color: #666; font-weight: normal; float: left; margin: 3px 5px; text-shadow: 1px 1px 1px #fff; }
-#views-exposed-form-organization-list-page .views-exposed-form .views-exposed-widget .views-widget, #views-exposed-form-events-list-page .views-exposed-form .views-exposed-widget .views-widget { float: left; }
-#views-exposed-form-organization-list-page .views-exposed-form .views-exposed-widget .form-item select, #views-exposed-form-events-list-page .views-exposed-form .views-exposed-widget .form-item select { border: 1px solid #ccc; }
-#views-exposed-form-organization-list-page .views-exposed-form .views-exposed-widget .form-submit, #views-exposed-form-events-list-page .views-exposed-form .views-exposed-widget .form-submit { margin-top: 2px; font-family: "Montserrat", Verdana, Geneva, "DejaVu Sans", Arial, Helvetica, sans-serif; font-size: 1em; text-transform: none; color: #666; text-shadow: 1px 1px 1px #fff; padding: 2px 8px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(50%, #eeeeee), color-stop(100%, #dadada)); background-image: -webkit-linear-gradient(#cccccc, #eeeeee, #dadada); background-image: -moz-linear-gradient(#cccccc, #eeeeee, #dadada); background-image: -o-linear-gradient(#cccccc, #eeeeee, #dadada); background-image: linear-gradient(#cccccc, #eeeeee, #dadada); border: 1px solid #ccc; letter-spacing: 0; }
-#views-exposed-form-organization-list-page .views-exposed-form .views-exposed-widget .form-submit:hover, #views-exposed-form-events-list-page .views-exposed-form .views-exposed-widget .form-submit:hover { background: #164e83; color: #fff; text-shadow: none; }
+#views-exposed-form-application-list-page #edit-civic, #views-exposed-form-organization-list-page #edit-civic, #views-exposed-form-events-list-page #edit-civic { width: 300px; }
+#views-exposed-form-application-list-page .views-exposed-form .views-exposed-widget .form-submit, #views-exposed-form-organization-list-page .views-exposed-form .views-exposed-widget .form-submit, #views-exposed-form-events-list-page .views-exposed-form .views-exposed-widget .form-submit { margin-top: 20px; }
 
 .view-event-sponsors-block .view-content .views-row { float: left; }
 .view-event-sponsors-block .view-content .views-field { display: table; height: 100px; margin-bottom: 10px; }
@@ -589,7 +583,7 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 #branding #logo { block: inline; padding: 0px; }
 
 #views-exposed-form-search-page .views-exposed-form .views-exposed-widget { padding: 0 0 0 0; }
-#views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-submit { margin-top: 0em; background: transparent url(../images/Search_Yellow.png) no-repeat left top; text-indent: -9999px; padding-right: 30px; }
+#views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-submit { margin-top: 0em; background: transparent url(../images/Search_Yellow.png) no-repeat left top; text-indent: -9999px; padding-right: 30px; font-size: 200%; }
 #views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-item input.form-text, #views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-item textarea { border: none; background: #dbdbdb; }
 
 #edit-query { height: 29px; }
@@ -635,5 +629,7 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title { font-size: 20pt
 .view-stories .views-field-title { font-size: 160%; }
 
 .views-field-title { font-size: 120%; }
+
+.form-select { border: none; background: #dbdbdb; }
 
 .node-content .field-name-field-image { float: left; padding-right: 15px; }
