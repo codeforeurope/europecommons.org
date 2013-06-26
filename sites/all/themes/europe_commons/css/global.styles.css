@@ -264,7 +264,7 @@ ul.action-links { margin: 20px 0 0; list-style: none; }
 
 /* ============================================================================= Block Styling ========================================================================== */
 /* Main wrapper for most blocks, block_system_main does not have it */
-.block { margin-bottom: 20px; }
+.block { margin-bottom: 10px; }
 
 /* Inner wrapper for most blocks, good for margin, padding and borders, block_system_main does not have it */
 /* The first block in the region */
@@ -626,6 +626,8 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title a, div.view-highl
 div.view-highlighted .views-slideshow-overlay .slideshow-title { font-size: 20pt; }
 
 #block-panels-mini-blog > h2, #block-panels-mini-what-s-happening > h2 { background-color: #f3e514; padding-left: 5px; margin-bottom: 5px; }
+
+#mini-panel-call_to_action .block { margin-top: 10px; margin-bottom: 0px; }
 
 .view-sponsors-block tr { /* Table row striping */ }
 .view-sponsors-block tr.info, .view-sponsors-block tr.even, .view-sponsors-block tr:nth-child(2n+2) { background-color: rgba(255, 255, 255, 0.4); }

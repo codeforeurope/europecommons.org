@@ -1350,7 +1350,7 @@ ul.action-links {
  * Main wrapper for most blocks, block_system_main does not have it
  */
 .block {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 
@@ -2981,6 +2981,11 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title {
   background-color: $title-bar-color;
   padding-left: 5px;
   margin-bottom: 5px;
+}
+
+#mini-panel-call_to_action .block {
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 
