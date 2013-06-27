@@ -69,7 +69,6 @@ body.sidebar-second #main-content { padding-right: 20px; }
 /* Site name (h1) */
 #site-name { margin: 0; }
 #site-name a:link, #site-name a:visited { text-decoration: none; }
-#site-name a:hover, #site-name a:focus { text-decoration: underline; }
 
 /* Site slogan (h2) */
 #site-slogan { margin: 0; }
@@ -112,7 +111,7 @@ ul.links li { display: inline; list-style: none; padding: 0 10px 0 0; }
 /* ============================================================================= Links ========================================================================== */
 a { text-decoration: none; }
 a:link, a:visited { color: #15ace8; }
-a:hover, a:focus { text-decoration: underline; color: #4690d7; }
+a:hover, a:focus { color: #4690d7; }
 
 /* ============================================================================= Primary, Secondary and Menu Bar region menus ========================================================================== */
 /* Use one of the following id's for granular control: - #menu-bar (menu bar region) - #primary-menu (main menu) - #secondary-menu (secondary/user menu) You can target all of these with .nav or div[id$="menu-bar"] */
@@ -404,16 +403,16 @@ ul.action-links { margin: 20px 0 0; list-style: none; }
 .marker, .form-required { color: #cc0000; }
 
 /* The submit button */
-.form-submit, button { border: none; background: #f3e514; color: #000; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 130%; padding: 2px 0px 2px; margin-top: 1.3em; letter-spacing: 1px; margin-right: .5em; width: 100px; }
+.form-submit, button { border: none; background: #f3e514; color: #000; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 130%; padding: 2px 10px 2px; margin-top: 1.3em; letter-spacing: 1px; margin-right: .5em; }
 
-.form-submit:hover, button:hover { background: #164e83; }
+.form-submit:hover, button:hover { background: #5FAF2C; }
 
 .container-inline div, .container-inline label { display: inline; }
 
 /* Define consistent borders */
 fieldset { border: 1px solid #d1e9fc; margin: 2em 0 0; position: relative; background: rgba(236, 244, 251, 0.3); }
 
-legend { background: #8ad8f7; padding: 0 10px; color: #fff; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.5em; line-height: 1.1em; letter-spacing: .5px; text-shadow: 1px 1px 0 #4690d7; position: absolute; top: -10px; left: 10px; }
+legend { background: #f3e514; padding: 0 10px; color: #000; font-size: 1.5em; line-height: 1.1em; letter-spacing: .5px; text-shadow: 1px 1px 0 #4690d7; position: absolute; top: -20px; left: 0px; }
 
 /* Tips for Drupal's input formats */
 /* Buttons used by contrib modules like Media */
@@ -623,8 +622,8 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title { font-size: 20pt
 
 #mini-panel-call_to_action .block { margin-top: 10px; margin-bottom: 0px; }
 
-.view-sponsors-block tr { /* Table row striping */ }
-.view-sponsors-block tr.info, .view-sponsors-block tr.even, .view-sponsors-block tr:nth-child(2n+2) { background-color: rgba(255, 255, 255, 0.4); }
+.view-sponsors-block { padding-bottom: 120px; }
+.view-sponsors-block .views-row { align: center; float: left; margin-left: 40px; }
 
 .view-stories .views-field-title { font-size: 160%; }
 
