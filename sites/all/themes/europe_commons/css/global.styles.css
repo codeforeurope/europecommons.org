@@ -592,6 +592,10 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 #menu-bar { background: none repeat scroll 0 0 #f3e514; }
 #menu-bar nav ul.menu a { text-transform: none; color: #000; }
 
+#block-menu-block-1 { float: left; }
+
+#block-menu-menu-signin-register-menu, #block-system-user-menu { float: right; }
+
 .block .block-title { font-size: 18pt; color: #000; }
 
 .region-two-50-second { float: right; padding-top: 120px; }
