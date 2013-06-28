@@ -548,8 +548,6 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 .view-event-sponsors-block .view-content .views-field { display: table; height: 100px; margin-bottom: 10px; }
 .view-event-sponsors-block .view-content .views-field .field-content { width: auto; text-align: center; display: table-cell; vertical-align: middle; padding: 0 5px; }
 
-.country { display: none; }
-
 .view-events-list table { margin-left: 10px; }
 .view-events-list td { width: 50%; }
 .view-events-list caption { font-family: "Montserrat", Arial, Helvetica, sans-serif; font-size: 1.5em; color: #164e83; margin-left: -10px; }
