@@ -16,6 +16,7 @@ features[features_api][] = api:2
 features[openlayers_maps][] = organization_map
 features[openlayers_maps][] = organizations
 features[openlayers_styles][] = organization_marker
+features[views_view][] = apps_created
 features[views_view][] = organization_at_a_glance
 features[views_view][] = organization_categories
 features[views_view][] = organization_list
