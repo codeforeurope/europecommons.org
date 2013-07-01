@@ -618,6 +618,8 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 
 .view-homepage-latest .views-row { margin-bottom: 15px; }
 
+div.view-highlighted .views-slideshow-overlay { background-color: transparent; }
+
 div.view-highlighted .views-slideshow-overlay .slideshow-title, div.view-highlighted .views-slideshow-overlay .slideshow-text { background-color: #FFFFFF; color: #000; display: inline-block; padding: 0 5px 0 5px; font-size: 15pt; }
 div.view-highlighted .views-slideshow-overlay .slideshow-title a, div.view-highlighted .views-slideshow-overlay .slideshow-title a:link, div.view-highlighted .views-slideshow-overlay .slideshow-title a:active, div.view-highlighted .views-slideshow-overlay .slideshow-title a:visited, div.view-highlighted .views-slideshow-overlay .slideshow-text a, div.view-highlighted .views-slideshow-overlay .slideshow-text a:link, div.view-highlighted .views-slideshow-overlay .slideshow-text a:active, div.view-highlighted .views-slideshow-overlay .slideshow-text a:visited { color: #000; }
 

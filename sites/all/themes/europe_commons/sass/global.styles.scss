@@ -2984,6 +2984,9 @@ tr.error {
 // ----------------------------------------------------------------------------
 // Highlight block
 
+div.view-highlighted .views-slideshow-overlay {
+  background-color: transparent;
+}
 div.view-highlighted .views-slideshow-overlay .slideshow-title,
 div.view-highlighted .views-slideshow-overlay .slideshow-text {
   background-color: #FFFFFF;
