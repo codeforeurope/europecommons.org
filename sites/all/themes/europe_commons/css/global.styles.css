@@ -582,6 +582,7 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 #views-exposed-form-search-page .views-exposed-form .views-exposed-widget { padding: 0 0 0 0; }
 #views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-submit { margin-top: 0em; background: transparent url(../images/Search_Yellow.png) no-repeat left top; text-indent: -9999px; padding-right: 20px; margin-right: 0px; font-size: 200%; }
 #views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-item input.form-text, #views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-item textarea { border: none; background: #dbdbdb; }
+#views-exposed-form-search-page .views-exposed-form .views-exposed-widget .compact-form-label { font-weight: normal; top: 6px; }
 
 #block-views-exp-search-page .block-inner { margin-right: 0px; }
 
