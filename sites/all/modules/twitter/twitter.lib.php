@@ -138,6 +138,13 @@ class Twitter {
     $headers['Authorization'] = 'Oauth';
     $headers['Content-type'] = 'application/x-www-form-urlencoded';
 
+drupal_set_message('<pre>' . print_r(array(
+  'url' => $url,
+  'headers' => $headers,
+  'method' => $method,
+  'data' => $data,
+), TRUE) . '</pre>');
+
     $response = $this->doRequest($url, $headers, $method, $data);
     if (!isset($response->error)) {
       return $response->data;
