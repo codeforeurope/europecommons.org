@@ -116,20 +116,20 @@ a:hover, a:focus { color: #4690d7; }
 /* ============================================================================= Primary, Secondary and Menu Bar region menus ========================================================================== */
 /* Use one of the following id's for granular control: - #menu-bar (menu bar region) - #primary-menu (main menu) - #secondary-menu (secondary/user menu) You can target all of these with .nav or div[id$="menu-bar"] */
 #menu-bar { height: 40px; line-height: 40px; background: #4690d7; }
-#menu-bar nav ul.menu li { margin-left: 5px; }
-#menu-bar nav ul.menu li.menu-mlid-571 { background: transparent url(../images/home_dwn.png) no-repeat left center; }
-#menu-bar nav ul.menu li.menu-mlid-571:hover { background: transparent url(../images/home_up.png) no-repeat left center; }
-#menu-bar nav ul.menu li.menu-mlid-673 { background: transparent url(../images/app_dwn.png) no-repeat left center; }
-#menu-bar nav ul.menu li.menu-mlid-673:hover { background: transparent url(../images/app_up.png) no-repeat left center; }
-#menu-bar nav ul.menu li.menu-mlid-672 { background: transparent url(../images/org_dwn.png) no-repeat left center; }
-#menu-bar nav ul.menu li.menu-mlid-672:hover { background: transparent url(../images/org_up.png) no-repeat left center; }
-#menu-bar nav ul.menu li.menu-mlid-882 { background: transparent url(../images/blog_dwn.png) no-repeat left center; }
-#menu-bar nav ul.menu li.menu-mlid-882:hover { background: transparent url(../images/blog_up.png) no-repeat left center; }
-#menu-bar nav ul.menu li.menu-mlid-837 { background: transparent url(../images/about_dwn.png) no-repeat left center; }
-#menu-bar nav ul.menu li.menu-mlid-837:hover { background: transparent url(../images/about_up.png) no-repeat left center; }
-#menu-bar nav ul.menu li.menu-mlid-860 { background: transparent url(../images/sign_up.png) no-repeat left center; }
-#menu-bar nav ul.menu li.menu-mlid-860:hover { background: transparent url(../images/sign_dwn.png) no-repeat left center; }
-#menu-bar nav ul.menu a { color: #fff; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal !important; font-size: 1.2em; padding-left: 23px; }
+#menu-bar nav#block-menu-block-1 ul.menu li { margin-right: 35px; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-571 { background: transparent url(../images/home_dwn.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-571:hover { background: transparent url(../images/home_up.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-673 { background: transparent url(../images/app_dwn.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-673:hover { background: transparent url(../images/app_up.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-672 { background: transparent url(../images/org_dwn.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-672:hover { background: transparent url(../images/org_up.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-882 { background: transparent url(../images/blog_dwn.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-882:hover { background: transparent url(../images/blog_up.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-837 { background: transparent url(../images/about_dwn.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-837:hover { background: transparent url(../images/about_up.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-860 { background: transparent url(../images/sign_up.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-860:hover { background: transparent url(../images/sign_dwn.png) no-repeat left center; }
+#menu-bar nav#block-menu-block-1 ul.menu a { font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal !important; font-size: 1.2em; padding-left: 23px; }
 #menu-bar #block-system-main-menu { margin: 0; float: left; }
 #menu-bar #block-menu-menu-social-links { float: right; margin: 0; }
 
@@ -281,7 +281,7 @@ ul.action-links { margin: 20px 0 0; list-style: none; }
 /* Block for the latest news items in the first category */
 /* Block for the latest news items in the first feed */
 /* First block created with "Add block" link */
-#block-block-2 { *position: relative; *zoom: 1; background: #f3e514; height: 40px; margin-top: 10px; }
+#block-block-2 { *position: relative; *zoom: 1; background: #f8ec3b; height: 40px; margin-top: 10px; }
 #block-block-2:before, #block-block-2:after { content: ""; display: table; }
 #block-block-2:after { clear: both; }
 #block-block-2 h2 { padding-top: 5px; }
@@ -403,7 +403,7 @@ ul.action-links { margin: 20px 0 0; list-style: none; }
 .marker, .form-required { color: #cc0000; }
 
 /* The submit button */
-.form-submit, button { border: none; background: #f3e514; color: #000; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 130%; padding: 2px 10px 2px; margin-top: 1.3em; letter-spacing: 1px; margin-right: .5em; }
+.form-submit, button { border: none; background: #f8ec3b; color: #000; font-family: "Montserrat", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 130%; padding: 2px 10px 2px; margin-top: 1.3em; letter-spacing: 1px; margin-right: .5em; }
 
 .form-submit:hover, button:hover { background: #5FAF2C; }
 
@@ -412,7 +412,7 @@ ul.action-links { margin: 20px 0 0; list-style: none; }
 /* Define consistent borders */
 fieldset { border: 1px solid #d1e9fc; margin: 2em 0 0; position: relative; background: rgba(236, 244, 251, 0.3); }
 
-legend { background: #f3e514; padding: 0 10px; color: #000; font-size: 1.5em; line-height: 1.1em; letter-spacing: .5px; text-shadow: 1px 1px 0 #4690d7; position: absolute; top: -20px; left: 0px; }
+legend { background: #f8ec3b; padding: 0 10px; color: #000; font-size: 1.5em; line-height: 1.1em; letter-spacing: .5px; text-shadow: 1px 1px 0 #4690d7; position: absolute; top: -20px; left: 0px; }
 
 /* Tips for Drupal's input formats */
 /* Buttons used by contrib modules like Media */
@@ -541,7 +541,7 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 .view-blog .comment-add a:hover { background: transparent url(images/blog-icon.png) no-repeat 0 -63px; }
 .view-blog ul.links.inline { line-height: 20px; margin-top: 5px; }
 
-#views-exposed-form-application-list-page #edit-civic, #views-exposed-form-organization-list-page #edit-civic, #views-exposed-form-events-list-page #edit-civic { width: 300px; }
+#views-exposed-form-application-list-page #edit-civic, #views-exposed-form-organization-list-page #edit-civic, #views-exposed-form-events-list-page #edit-civic { width: 280px; }
 #views-exposed-form-application-list-page .views-exposed-form .views-exposed-widget .form-submit, #views-exposed-form-organization-list-page .views-exposed-form .views-exposed-widget .form-submit, #views-exposed-form-events-list-page .views-exposed-form .views-exposed-widget .form-submit { margin-top: 20px; }
 
 .view-event-sponsors-block .view-content .views-row { float: left; }
@@ -580,21 +580,23 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 #branding #logo { block: inline; padding: 0px; }
 
 #views-exposed-form-search-page .views-exposed-form .views-exposed-widget { padding: 0 0 0 0; }
-#views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-submit { margin-top: 0em; background: transparent url(../images/Search_Yellow.png) no-repeat left top; text-indent: -9999px; padding-right: 30px; font-size: 200%; }
+#views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-submit { margin-top: 0em; background: transparent url(../images/Search_Yellow.png) no-repeat left top; text-indent: -9999px; padding-right: 20px; margin-right: 0px; font-size: 200%; }
 #views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-item input.form-text, #views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-item textarea { border: none; background: #dbdbdb; }
+
+#block-views-exp-search-page .block-inner { margin-right: 0px; }
 
 #edit-query { height: 29px; }
 
 #secondary-menu-bar { float: right; }
 
-#menu-bar { background: none repeat scroll 0 0 #f3e514; }
+#menu-bar { background: none repeat scroll 0 0 #f8ec3b; }
 #menu-bar nav ul.menu a { text-transform: none; color: #000; }
 
 #block-menu-block-1 { float: left; }
 
 #block-menu-menu-signin-register-menu, #block-system-user-menu { float: right; }
 
-.block .block-title { font-size: 18pt; color: #000; }
+.block .block-title { font-size: 18pt; color: #000; margin-left: 0px; }
 
 .region-two-50-second { float: right; padding-top: 120px; }
 .region-two-50-second a.button { margin: 40px 0 0 0; padding: 100px 20px 50px 20px; height: 40px; -webkit-appearance: none; }
@@ -620,7 +622,7 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title a, div.view-highl
 
 div.view-highlighted .views-slideshow-overlay .slideshow-title { font-size: 20pt; }
 
-#block-panels-mini-blog > h2, #block-panels-mini-what-s-happening > h2 { background-color: #f3e514; padding-left: 5px; margin-bottom: 5px; }
+#block-panels-mini-blog > h2, #block-panels-mini-what-s-happening > h2 { background-color: #f8ec3b; padding-left: 5px; margin-bottom: 5px; }
 
 #mini-panel-call_to_action .block { margin-top: 10px; margin-bottom: 0px; }
 
