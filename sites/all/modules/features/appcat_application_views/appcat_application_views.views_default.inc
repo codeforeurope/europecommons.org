@@ -620,6 +620,58 @@ function appcat_application_views_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Application function */
+  $handler->display->display_options['fields']['field_application_category']['id'] = 'field_application_category';
+  $handler->display->display_options['fields']['field_application_category']['table'] = 'field_data_field_application_category';
+  $handler->display->display_options['fields']['field_application_category']['field'] = 'field_application_category';
+  $handler->display->display_options['fields']['field_application_category']['label'] = 'App function';
+  $handler->display->display_options['fields']['field_application_category']['delta_offset'] = '0';
+  /* Field: Content: Civic sector */
+  $handler->display->display_options['fields']['field_civic_category']['id'] = 'field_civic_category';
+  $handler->display->display_options['fields']['field_civic_category']['table'] = 'field_data_field_civic_category';
+  $handler->display->display_options['fields']['field_civic_category']['field'] = 'field_civic_category';
+  $handler->display->display_options['fields']['field_civic_category']['delta_offset'] = '0';
+  /* Field: Content: Software type */
+  $handler->display->display_options['fields']['field_software_type']['id'] = 'field_software_type';
+  $handler->display->display_options['fields']['field_software_type']['table'] = 'field_data_field_software_type';
+  $handler->display->display_options['fields']['field_software_type']['field'] = 'field_software_type';
+  $handler->display->display_options['fields']['field_software_type']['label'] = 'App type';
+  $handler->display->display_options['fields']['field_software_type']['delta_offset'] = '0';
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'Date added';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'F j, Y';
+  /* Field: Content: Rating */
+  $handler->display->display_options['fields']['field_aggregate_rating']['id'] = 'field_aggregate_rating';
+  $handler->display->display_options['fields']['field_aggregate_rating']['table'] = 'field_data_field_aggregate_rating';
+  $handler->display->display_options['fields']['field_aggregate_rating']['field'] = 'field_aggregate_rating';
+  $handler->display->display_options['fields']['field_aggregate_rating']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_aggregate_rating']['click_sort_column'] = 'rating';
+  $handler->display->display_options['fields']['field_aggregate_rating']['type'] = 'fivestar_formatter_rating';
+  $handler->display->display_options['fields']['field_aggregate_rating']['settings'] = array(
+    'widget' => array(
+      'fivestar_widget' => 'default',
+    ),
+    'expose' => 1,
+    'style' => 'average',
+    'text' => 'average',
+  );
   $handler->display->display_options['path'] = 'apps';
 
   /* Display: Applications feed */
