@@ -638,4 +638,6 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title { font-size: 20pt
 
 .form-select { border: none; background: #dbdbdb; }
 
+.view-stories .views-row { float: left; margin-bottom: 15px; }
+
 .node-content .field-name-field-image { float: left; padding-right: 15px; }
