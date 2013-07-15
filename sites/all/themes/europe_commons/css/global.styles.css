@@ -115,7 +115,7 @@ a:hover, a:focus { color: #4690d7; }
 
 /* ============================================================================= Primary, Secondary and Menu Bar region menus ========================================================================== */
 /* Use one of the following id's for granular control: - #menu-bar (menu bar region) - #primary-menu (main menu) - #secondary-menu (secondary/user menu) You can target all of these with .nav or div[id$="menu-bar"] */
-#menu-bar { height: 40px; line-height: 40px; background: #4690d7; }
+#menu-bar { height: 70px; line-height: 40px; background: #4690d7; }
 #menu-bar nav#block-menu-block-1 ul.menu li { margin-right: 35px; }
 #menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-571 { background: transparent url(../images/home_dwn.png) no-repeat left center; }
 #menu-bar nav#block-menu-block-1 ul.menu li.menu-mlid-571:hover { background: transparent url(../images/home_up.png) no-repeat left center; }
@@ -590,12 +590,14 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 
 #secondary-menu-bar { float: right; }
 
-#menu-bar { background: none repeat scroll 0 0 #f8ec3b; }
+#menu-bar { background: none repeat scroll 0 0 #d3d3d3; }
 #menu-bar nav ul.menu a { text-transform: none; color: #000; }
 
-#block-menu-block-1 { float: left; }
+#block-menu-block-1 { background-color: #f8ec3b; margin: 0; padding-left: 10px; }
 
-#block-menu-menu-signin-register-menu, #block-system-user-menu { float: right; }
+#block-menu-menu-actions { margin: 0; float: left; line-height: 30px; }
+
+#block-menu-menu-signin-register-menu, #block-system-user-menu { float: right; line-height: 30px; }
 
 .block .block-title { font-size: 18pt; color: #000; margin-left: 0px; }
 

@@ -587,7 +587,7 @@ a {
  */
 
 #menu-bar {
-  height:40px;
+  height:70px;
   line-height: 40px;
   background: $blue;
   nav#block-menu-block-1 ul.menu {
@@ -2890,7 +2890,7 @@ tr.error {
 }
 
 #menu-bar {
-  background: none repeat scroll 0 0 $title-bar-color;
+  background: none repeat scroll 0 0 #d3d3d3; //$title-bar-color;
   nav ul.menu a {
     text-transform: none;
     color: #000;
@@ -2898,12 +2898,30 @@ tr.error {
 }
 
 #block-menu-block-1 {
+  // float: left;
+  background-color: $title-bar-color;
+  margin: 0;
+  padding-left: 10px;
+
+}
+
+#block-menu-menu-actions {
+  margin: 0;
+  // padding-top: -3;
+  // background-color: #d3d3d3;
   float: left;
+  // width: 100%;
+  // display: inline;
+  line-height: 30px;
 }
 
 #block-menu-menu-signin-register-menu,
 #block-system-user-menu {
   float: right;
+  line-height: 30px;
+  // background-color: #d3d3d3;
+  // width: 30%;
+  // display: inline;
 }
 
 

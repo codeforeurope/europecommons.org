@@ -24,6 +24,78 @@ function appcat_misc_menus_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -50,
   );
+  // Exported menu link: menu-actions:node/add/application
+  $menu_links['menu-actions:node/add/application'] = array(
+    'menu_name' => 'menu-actions',
+    'link_path' => 'node/add/application',
+    'router_path' => 'node/add/application',
+    'link_title' => '+App',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+  );
+  // Exported menu link: menu-actions:node/add/deployment
+  $menu_links['menu-actions:node/add/deployment'] = array(
+    'menu_name' => 'menu-actions',
+    'link_path' => 'node/add/deployment',
+    'router_path' => 'node/add/deployment',
+    'link_title' => '+Deployment',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+  );
+  // Exported menu link: menu-actions:node/add/organization
+  $menu_links['menu-actions:node/add/organization'] = array(
+    'menu_name' => 'menu-actions',
+    'link_path' => 'node/add/organization',
+    'router_path' => 'node/add/organization',
+    'link_title' => '+Org',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+  );
+  // Exported menu link: menu-actions:node/add/story
+  $menu_links['menu-actions:node/add/story'] = array(
+    'menu_name' => 'menu-actions',
+    'link_path' => 'node/add/story',
+    'router_path' => 'node/add',
+    'link_title' => '+Story',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+  );
   // Exported menu link: menu-menu-bar:user
   $menu_links['menu-menu-bar:user'] = array(
     'menu_name' => 'menu-menu-bar',
@@ -62,6 +134,10 @@ function appcat_misc_menus_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
+  t('+App');
+  t('+Deployment');
+  t('+Org');
+  t('+Story');
   t('Account');
   t('Home');
   t('Sign in/register');

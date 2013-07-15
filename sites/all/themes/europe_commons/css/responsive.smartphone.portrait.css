@@ -35,3 +35,9 @@ html { font-size: 112.5%; }
 
 #block-views-sponsors-block-block-4 .view-content div { display: block; }
 #block-views-sponsors-block-block-4 .views-field-title { border: none; }
+
+.region-two-50-second { float: right; padding-top: 100px; font-size: 0.7em; }
+.region-two-50-second a.button { margin: 20px 0 0 0; padding: 60px 10px 10px 10px; height: 40px; -webkit-appearance: none; }
+.region-two-50-second a:nth-child(1) { background: transparent url(../images/Add_App_Y_45.png) no-repeat center top; }
+.region-two-50-second a:nth-child(2) { background: transparent url(../images/Add_Org_Y_45.png) no-repeat center top; }
+.region-two-50-second a:nth-child(3) { background: transparent url(../images/Write_story_Y_45.png) no-repeat center top; }
