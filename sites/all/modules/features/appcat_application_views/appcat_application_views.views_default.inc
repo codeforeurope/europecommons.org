@@ -643,21 +643,6 @@ function appcat_application_views_views_default_views() {
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'F j, Y';
-  /* Field: Content: Rating */
-  $handler->display->display_options['fields']['field_aggregate_rating']['id'] = 'field_aggregate_rating';
-  $handler->display->display_options['fields']['field_aggregate_rating']['table'] = 'field_data_field_aggregate_rating';
-  $handler->display->display_options['fields']['field_aggregate_rating']['field'] = 'field_aggregate_rating';
-  $handler->display->display_options['fields']['field_aggregate_rating']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_aggregate_rating']['click_sort_column'] = 'rating';
-  $handler->display->display_options['fields']['field_aggregate_rating']['type'] = 'fivestar_formatter_rating';
-  $handler->display->display_options['fields']['field_aggregate_rating']['settings'] = array(
-    'widget' => array(
-      'fivestar_widget' => 'default',
-    ),
-    'expose' => 1,
-    'style' => 'average',
-    'text' => 'average',
-  );
   $handler->display->display_options['path'] = 'apps';
 
   /* Display: Applications feed */
