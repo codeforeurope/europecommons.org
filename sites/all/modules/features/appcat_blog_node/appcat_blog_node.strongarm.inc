@@ -87,10 +87,10 @@ function appcat_blog_node_strongarm() {
           'weight' => '-5',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '4',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '5',
         ),
         'language' => array(
           'weight' => '5',

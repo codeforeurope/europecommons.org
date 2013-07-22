@@ -113,6 +113,10 @@ function appcat_blog_node_rdf_default_mappings() {
     'title_field' => array(
       'predicates' => array(),
     ),
+    'field_file_attachments' => array(
+      'predicates' => array(),
+      'type' => 'rel',
+    ),
   );
 
   return $schemaorg;
