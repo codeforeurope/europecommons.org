@@ -42,6 +42,24 @@ function appcat_misc_menus_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
   );
+  // Exported menu link: menu-actions:node/add/blog
+  $menu_links['menu-actions:node/add/blog'] = array(
+    'menu_name' => 'menu-actions',
+    'link_path' => 'node/add/blog',
+    'router_path' => 'node/add/blog',
+    'link_title' => '+Story',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+  );
   // Exported menu link: menu-actions:node/add/deployment
   $menu_links['menu-actions:node/add/deployment'] = array(
     'menu_name' => 'menu-actions',
@@ -66,24 +84,6 @@ function appcat_misc_menus_menu_default_menu_links() {
     'link_path' => 'node/add/organization',
     'router_path' => 'node/add/organization',
     'link_title' => '+Org',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-  );
-  // Exported menu link: menu-actions:node/add/story
-  $menu_links['menu-actions:node/add/story'] = array(
-    'menu_name' => 'menu-actions',
-    'link_path' => 'node/add/story',
-    'router_path' => 'node/add',
-    'link_title' => '+Story',
     'options' => array(
       'attributes' => array(
         'title' => '',
