@@ -22,7 +22,7 @@ function appcat_application_views_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'At a Glance';
+  $handler->display->display_options['title'] = 'At a glance';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -144,7 +144,7 @@ function appcat_application_views_views_default_views() {
   /* Display: Application Key Features */
   $handler = $view->new_display('block', 'Application Key Features', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Key Features';
+  $handler->display->display_options['title'] = 'Key features';
   $handler->display->display_options['display_description'] = 'Displays the key features for an application';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Key features */
