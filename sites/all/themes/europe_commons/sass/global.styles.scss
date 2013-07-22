@@ -2864,6 +2864,9 @@ tr.error {
     margin-right: 0px;
     font-size: 200%;
   }
+  .form-submit:hover {
+    background: transparent url(../images/Search_Green.png) no-repeat left top;
+  }
   .form-item input.form-text, .form-item textarea {
     border: none;
     background: $grey-color;
@@ -3002,9 +3005,6 @@ tr.error {
 // ----------------------------------------------------------------------------
 // Highlight block
 
-div.view-highlighted .views-slideshow-overlay {
-  background-color: transparent;
-}
 div.view-highlighted .views-slideshow-overlay .slideshow-title,
 div.view-highlighted .views-slideshow-overlay .slideshow-text {
   background-color: #FFFFFF;

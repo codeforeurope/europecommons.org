@@ -67,12 +67,12 @@ div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-
 div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-item a:link,
 div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-item a:active,
 div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-item a:visited {
-  color: #ddd;
-  padding: 3px;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  background-color: #000;
+  color: #f6e829;
+  padding: 5px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-color: #f6e829;
   text-decoration: none !important;
 }
 
@@ -81,17 +81,18 @@ div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-
 div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-item.active a:link,
 div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-item.active a:active,
 div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-item.active a:visited {
-  color: #fff;
+  color: #4ea036;
   font-weight: bold;
+  background-color: #4ea036;
 }
 
 div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-item a:hover {
   text-decoration: none;
 }
 
-div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-item a:hover {
+/*div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-item a:hover {
   background-color: #888;
-}
+}*/
 
 div.view-highlighted .views-slideshow-pager-fields .views-slideshow-pager-field-item {
   margin-right: 8px;
