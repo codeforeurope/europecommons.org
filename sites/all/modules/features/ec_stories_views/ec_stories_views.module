@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the EC Stories views feature.
+ */
+
+include_once 'ec_stories_views.features.inc';
