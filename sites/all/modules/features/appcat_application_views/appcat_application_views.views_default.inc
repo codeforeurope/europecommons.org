@@ -33,16 +33,24 @@ function appcat_application_views_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
-  /* Field: Content: Application function */
-  $handler->display->display_options['fields']['field_application_category']['id'] = 'field_application_category';
-  $handler->display->display_options['fields']['field_application_category']['table'] = 'field_data_field_application_category';
-  $handler->display->display_options['fields']['field_application_category']['field'] = 'field_application_category';
-  $handler->display->display_options['fields']['field_application_category']['delta_offset'] = '0';
+  /* Field: Content: Website */
+  $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
+  $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
+  $handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_url']['click_sort_column'] = 'url';
   /* Field: Content: Civic sector */
   $handler->display->display_options['fields']['field_civic_category']['id'] = 'field_civic_category';
   $handler->display->display_options['fields']['field_civic_category']['table'] = 'field_data_field_civic_category';
   $handler->display->display_options['fields']['field_civic_category']['field'] = 'field_civic_category';
+  $handler->display->display_options['fields']['field_civic_category']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_civic_category']['delta_offset'] = '0';
+  /* Field: Content: Application function */
+  $handler->display->display_options['fields']['field_application_category']['id'] = 'field_application_category';
+  $handler->display->display_options['fields']['field_application_category']['table'] = 'field_data_field_application_category';
+  $handler->display->display_options['fields']['field_application_category']['field'] = 'field_application_category';
+  $handler->display->display_options['fields']['field_application_category']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_application_category']['delta_offset'] = '0';
   /* Field: Content: Creator */
   $handler->display->display_options['fields']['field_creator']['id'] = 'field_creator';
   $handler->display->display_options['fields']['field_creator']['table'] = 'field_data_field_creator';
@@ -62,7 +70,7 @@ function appcat_application_views_views_default_views() {
   $handler->display->display_options['fields']['field_install_url']['id'] = 'field_install_url';
   $handler->display->display_options['fields']['field_install_url']['table'] = 'field_data_field_install_url';
   $handler->display->display_options['fields']['field_install_url']['field'] = 'field_install_url';
-  $handler->display->display_options['fields']['field_install_url']['label'] = 'Demo Website';
+  $handler->display->display_options['fields']['field_install_url']['label'] = 'Demo website';
   $handler->display->display_options['fields']['field_install_url']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_install_url']['click_sort_column'] = 'url';
   /* Field: Content: License */
@@ -71,11 +79,6 @@ function appcat_application_views_views_default_views() {
   $handler->display->display_options['fields']['field_license']['field'] = 'field_license';
   $handler->display->display_options['fields']['field_license']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_license']['delta_offset'] = '0';
-  /* Field: Content: Release Notes */
-  $handler->display->display_options['fields']['field_release_notes']['id'] = 'field_release_notes';
-  $handler->display->display_options['fields']['field_release_notes']['table'] = 'field_data_field_release_notes';
-  $handler->display->display_options['fields']['field_release_notes']['field'] = 'field_release_notes';
-  $handler->display->display_options['fields']['field_release_notes']['element_label_colon'] = FALSE;
   /* Field: Content: Requirements */
   $handler->display->display_options['fields']['field_requirements']['id'] = 'field_requirements';
   $handler->display->display_options['fields']['field_requirements']['table'] = 'field_data_field_requirements';
@@ -94,12 +97,6 @@ function appcat_application_views_views_default_views() {
   $handler->display->display_options['fields']['field_keywords']['field'] = 'field_keywords';
   $handler->display->display_options['fields']['field_keywords']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_keywords']['delta_offset'] = '0';
-  /* Field: Content: Website */
-  $handler->display->display_options['fields']['field_url']['id'] = 'field_url';
-  $handler->display->display_options['fields']['field_url']['table'] = 'field_data_field_url';
-  $handler->display->display_options['fields']['field_url']['field'] = 'field_url';
-  $handler->display->display_options['fields']['field_url']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_url']['click_sort_column'] = 'url';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -751,7 +748,7 @@ function appcat_application_views_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Application Deployments';
+  $handler->display->display_options['title'] = 'Application deployments';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';

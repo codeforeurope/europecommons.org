@@ -85,7 +85,7 @@ function appcat_organization_views_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'At a Glance';
+  $handler->display->display_options['title'] = 'At a glance';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -107,12 +107,14 @@ function appcat_organization_views_views_default_views() {
   $handler->display->display_options['fields']['field_civic_category']['id'] = 'field_civic_category';
   $handler->display->display_options['fields']['field_civic_category']['table'] = 'field_data_field_civic_category';
   $handler->display->display_options['fields']['field_civic_category']['field'] = 'field_civic_category';
+  $handler->display->display_options['fields']['field_civic_category']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_civic_category']['delta_offset'] = '0';
   /* Field: Content: Related applications */
   $handler->display->display_options['fields']['field_related_applications']['id'] = 'field_related_applications';
   $handler->display->display_options['fields']['field_related_applications']['table'] = 'field_data_field_related_applications';
   $handler->display->display_options['fields']['field_related_applications']['field'] = 'field_related_applications';
   $handler->display->display_options['fields']['field_related_applications']['label'] = 'Apps expertise';
+  $handler->display->display_options['fields']['field_related_applications']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_related_applications']['settings'] = array(
     'link' => 1,
   );
@@ -121,6 +123,7 @@ function appcat_organization_views_views_default_views() {
   $handler->display->display_options['fields']['field_additional_type']['id'] = 'field_additional_type';
   $handler->display->display_options['fields']['field_additional_type']['table'] = 'field_data_field_additional_type';
   $handler->display->display_options['fields']['field_additional_type']['field'] = 'field_additional_type';
+  $handler->display->display_options['fields']['field_additional_type']['element_label_colon'] = FALSE;
   /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_keywords']['id'] = 'field_keywords';
   $handler->display->display_options['fields']['field_keywords']['table'] = 'field_data_field_keywords';
@@ -669,7 +672,7 @@ function appcat_organization_views_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Organizations Involved (field_member) */
+  /* Contextual filter: Content: Members (field_member) */
   $handler->display->display_options['arguments']['field_member_target_id']['id'] = 'field_member_target_id';
   $handler->display->display_options['arguments']['field_member_target_id']['table'] = 'field_data_field_member';
   $handler->display->display_options['arguments']['field_member_target_id']['field'] = 'field_member_target_id';

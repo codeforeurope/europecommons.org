@@ -642,3 +642,6 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title { font-size: 20pt
 .view-stories .views-row { float: left; margin-bottom: 15px; }
 
 .node-content .field-name-field-image { float: left; padding-right: 15px; }
+
+.view-related-applications ul { list-style: none; padding: 0; }
+.view-related-applications ul li { margin: 0; }
