@@ -5,6 +5,7 @@ package = AppCat deployment
 php = 5.2.4
 version = 7.x-1.0-alpha3
 project = appcat_deployment_views
+dependencies[] = addressfield_tokens
 dependencies[] = ctools
 dependencies[] = openlayers
 dependencies[] = openlayers_views
