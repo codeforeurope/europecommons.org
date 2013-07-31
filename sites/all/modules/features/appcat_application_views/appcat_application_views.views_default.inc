@@ -640,6 +640,78 @@ function appcat_application_views_views_default_views() {
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'F j, Y';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'application' => 'application',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Civic sector (field_civic_category) */
+  $handler->display->display_options['filters']['field_civic_category_tid']['id'] = 'field_civic_category_tid';
+  $handler->display->display_options['filters']['field_civic_category_tid']['table'] = 'field_data_field_civic_category';
+  $handler->display->display_options['filters']['field_civic_category_tid']['field'] = 'field_civic_category_tid';
+  $handler->display->display_options['filters']['field_civic_category_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_civic_category_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_civic_category_tid']['expose']['operator_id'] = 'field_civic_category_tid_op';
+  $handler->display->display_options['filters']['field_civic_category_tid']['expose']['label'] = 'Civic sector';
+  $handler->display->display_options['filters']['field_civic_category_tid']['expose']['operator'] = 'field_civic_category_tid_op';
+  $handler->display->display_options['filters']['field_civic_category_tid']['expose']['identifier'] = 'field_civic_category_tid';
+  $handler->display->display_options['filters']['field_civic_category_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_civic_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_civic_category_tid']['vocabulary'] = 'civic_category';
+  $handler->display->display_options['filters']['field_civic_category_tid']['hierarchy'] = 1;
+  /* Filter criterion: Content: Software type (field_software_type) */
+  $handler->display->display_options['filters']['field_software_type_tid']['id'] = 'field_software_type_tid';
+  $handler->display->display_options['filters']['field_software_type_tid']['table'] = 'field_data_field_software_type';
+  $handler->display->display_options['filters']['field_software_type_tid']['field'] = 'field_software_type_tid';
+  $handler->display->display_options['filters']['field_software_type_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_software_type_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_software_type_tid']['expose']['operator_id'] = 'field_software_type_tid_op';
+  $handler->display->display_options['filters']['field_software_type_tid']['expose']['label'] = 'Software type';
+  $handler->display->display_options['filters']['field_software_type_tid']['expose']['operator'] = 'field_software_type_tid_op';
+  $handler->display->display_options['filters']['field_software_type_tid']['expose']['identifier'] = 'field_software_type_tid';
+  $handler->display->display_options['filters']['field_software_type_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_software_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_software_type_tid']['vocabulary'] = 'software_type';
+  /* Filter criterion: Content: Application function (field_application_category) */
+  $handler->display->display_options['filters']['field_application_category_tid']['id'] = 'field_application_category_tid';
+  $handler->display->display_options['filters']['field_application_category_tid']['table'] = 'field_data_field_application_category';
+  $handler->display->display_options['filters']['field_application_category_tid']['field'] = 'field_application_category_tid';
+  $handler->display->display_options['filters']['field_application_category_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_application_category_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_application_category_tid']['expose']['operator_id'] = 'field_application_category_tid_op';
+  $handler->display->display_options['filters']['field_application_category_tid']['expose']['label'] = 'App function';
+  $handler->display->display_options['filters']['field_application_category_tid']['expose']['operator'] = 'field_application_category_tid_op';
+  $handler->display->display_options['filters']['field_application_category_tid']['expose']['identifier'] = 'field_application_category_tid';
+  $handler->display->display_options['filters']['field_application_category_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_application_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_application_category_tid']['vocabulary'] = 'application_category';
+  $handler->display->display_options['filters']['field_application_category_tid']['hierarchy'] = 1;
   $handler->display->display_options['path'] = 'apps';
 
   /* Display: Applications feed */

@@ -24,6 +24,7 @@ dependencies[] = options
 dependencies[] = rdf
 dependencies[] = rdfx
 dependencies[] = schemaorg
+dependencies[] = sharethis
 dependencies[] = strongarm
 dependencies[] = styles
 dependencies[] = taxonomy
