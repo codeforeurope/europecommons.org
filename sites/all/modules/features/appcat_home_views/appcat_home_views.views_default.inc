@@ -172,6 +172,7 @@ function appcat_home_views_views_default_views() {
   $handler->display->display_options['fields']['field_deployment_of']['id'] = 'field_deployment_of';
   $handler->display->display_options['fields']['field_deployment_of']['table'] = 'field_data_field_deployment_of';
   $handler->display->display_options['fields']['field_deployment_of']['field'] = 'field_deployment_of';
+  $handler->display->display_options['fields']['field_deployment_of']['relationship'] = 'field_member_target_id';
   $handler->display->display_options['fields']['field_deployment_of']['label'] = 'Application';
   $handler->display->display_options['fields']['field_deployment_of']['settings'] = array(
     'link' => 1,
@@ -198,7 +199,9 @@ function appcat_home_views_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_deployment_of_target_id';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'apps/[field_deployment_of]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_location_1']['id'] = 'field_location_1';
