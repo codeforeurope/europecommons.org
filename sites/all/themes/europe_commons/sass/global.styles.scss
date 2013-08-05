@@ -2879,6 +2879,10 @@ tr.error {
   padding: 0 0 0 0;
 }
 
+.views-exposed-form .views-exposed-widgets label {
+  font-weight: normal;
+}
+
 #block-views-exp-search-page {
   .block-inner {
     margin-right: 0px;
@@ -3118,6 +3122,13 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title {
   padding-right: 15px;
 }
 
+.view-deployment-at-a-glance,
+.view-application-at-a-glance,
+.view-organization-at-a-glance {
+  .views-field {
+    margin-bottom: 15px;
+  }
+}
 .view-related-applications ul {
   list-style: none;
   padding: 0;

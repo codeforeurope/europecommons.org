@@ -585,6 +585,8 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 #views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-item input.form-text, #views-exposed-form-search-page .views-exposed-form .views-exposed-widget .form-item textarea { border: none; background: #dbdbdb; }
 #views-exposed-form-search-page .views-exposed-form .views-exposed-widget .compact-form-label { font-weight: normal; top: 6px; }
 
+.views-exposed-form .views-exposed-widgets label { font-weight: normal; }
+
 #block-views-exp-search-page .block-inner { margin-right: 0px; }
 
 #edit-query { height: 29px; }
@@ -643,6 +645,8 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title { font-size: 20pt
 .view-stories .views-row { float: left; margin-bottom: 15px; }
 
 .node-content .field-name-field-image { float: left; padding-right: 15px; }
+
+.view-deployment-at-a-glance .views-field, .view-application-at-a-glance .views-field, .view-organization-at-a-glance .views-field { margin-bottom: 15px; }
 
 .view-related-applications ul { list-style: none; padding: 0; }
 .view-related-applications ul li { margin: 0; }
