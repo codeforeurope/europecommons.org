@@ -45,7 +45,8 @@ html {
 
 body {
   font-family: $sans-serif-small; // Set from _custom.scss font variables
-  font-size: 80%;
+  font-size: 90%;
+  color: #6F6F6F;
 }
 
 #page {
@@ -2593,7 +2594,7 @@ tr.error {
 #block-views-homepage-latest-block-2 {
   @include zen-grid-item(8, 1);
   .views-field-title a {
-    font-size:1.4em;
+    // font-size:1.0em;
     margin:0 0 .5em 0;
     display: block;
     color: $red;
@@ -2981,6 +2982,7 @@ tr.error {
 }
 
 #welcome-msg {
+  color: #000;
   font-size: 28pt;
   margin: 0 0 0.7em 0;
   line-height: 1.1em;
@@ -3041,6 +3043,7 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title {
 #mini-panel-call_to_action .block {
   margin-top: 10px;
   margin-bottom: 0px;
+
 }
 
 
@@ -3065,10 +3068,26 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title {
   font-size: 160%;
 }
 
-.views-field-title {
-  font-size: 120%;
-}
+.view-organization-list,
+.view-application-list {
+// .views-field-title {
+//   // font-size: 120%;
+// }
 
+  a {
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $body_color;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
 
 // ----------------------------------------------------------------------------
 // App / orgs lists
@@ -3082,6 +3101,9 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title {
 //   width: 280px
 // }
 
+.view-application-list {
+
+}
 
 .view-stories .views-row {
   float: left;
