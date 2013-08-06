@@ -83,6 +83,12 @@ function appcat_application_contexts_context_default_contexts() {
           'region' => 'content',
           'weight' => '7',
         ),
+        'views-app_deployments_map-block' => array(
+          'module' => 'views',
+          'delta' => 'app_deployments_map-block',
+          'region' => 'content',
+          'weight' => '8',
+        ),
       ),
     ),
   );
