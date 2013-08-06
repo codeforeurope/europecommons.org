@@ -69,7 +69,7 @@ function appcat_application_views_views_default_views() {
   $handler->display->display_options['fields']['field_location']['label'] = '';
   $handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_location']['click_sort_column'] = 'country';
-  $handler->display->display_options['fields']['field_location']['type'] = 'addressfield_city_only';
+  $handler->display->display_options['fields']['field_location']['type'] = 'addressfield_citystate';
   $handler->display->display_options['fields']['field_location']['settings'] = array(
     'use_widget_handlers' => 1,
     'format_handlers' => array(
