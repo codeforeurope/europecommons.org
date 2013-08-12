@@ -18,14 +18,14 @@ function appcat_application_views_openlayers_maps() {
   $openlayers_maps->description = 'The deployments map for the Applications listing page';
   $openlayers_maps->data = array(
     'width' => 'auto',
-    'height' => '400px',
+    'height' => '550px',
     'image_path' => 'profiles/opencivic/openlayers_theme/img/',
     'css_path' => 'profiles/opencivic/openlayers_theme/style.css',
     'proxy_host' => '',
     'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
-        'centerpoint' => '7.023925,48.719961',
+        'centerpoint' => '7.023925,53.719961',
         'zoom' => '4',
       ),
       'restrict' => array(
@@ -74,18 +74,20 @@ function appcat_application_views_openlayers_maps() {
       'organizations_map_openlayers_orgs' => '0',
       'organization_map_openlayers_org' => '0',
       'deployments_map_openlayers_1' => '0',
-      'home_page_map_homepage' => '0',
+      'app_deployments_map_openlayers_1' => '0',
       'deployments_list_openlayers_deployments' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
+      'home_page_map_homepage' => '0',
       'geofield_formatter' => '0',
     ),
     'layer_styles' => array(
       'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
-      'deployments_list_openlayers_deployments' => '0',
       'home_page_map_homepage' => '0',
+      'deployments_list_openlayers_deployments' => '0',
+      'app_deployments_map_openlayers_1' => '0',
       'organizations_map_openlayers_orgs' => '0',
       'organization_map_openlayers_org' => '0',
       'deployments_map_openlayers_1' => 'deployment_marker',
@@ -94,8 +96,9 @@ function appcat_application_views_openlayers_maps() {
       'geofield_formatter' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
-      'deployments_list_openlayers_deployments' => '0',
       'home_page_map_homepage' => '0',
+      'deployments_list_openlayers_deployments' => '0',
+      'app_deployments_map_openlayers_1' => '0',
       'organizations_map_openlayers_orgs' => '0',
       'organization_map_openlayers_org' => '0',
       'deployments_map_openlayers_1' => 'deployment_marker',
@@ -105,8 +108,9 @@ function appcat_application_views_openlayers_maps() {
       'geofield_formatter' => 0,
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
-      'deployments_list_openlayers_deployments' => 0,
       'home_page_map_homepage' => 0,
+      'deployments_list_openlayers_deployments' => 0,
+      'app_deployments_map_openlayers_1' => 0,
       'organizations_map_openlayers_orgs' => 0,
       'organization_map_openlayers_org' => 0,
     ),
@@ -115,8 +119,9 @@ function appcat_application_views_openlayers_maps() {
       'geofield_formatter' => 0,
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
-      'deployments_list_openlayers_deployments' => 0,
       'home_page_map_homepage' => 0,
+      'deployments_list_openlayers_deployments' => 0,
+      'app_deployments_map_openlayers_1' => 0,
       'organizations_map_openlayers_orgs' => 0,
       'organization_map_openlayers_org' => 0,
     ),
@@ -138,14 +143,14 @@ function appcat_application_views_openlayers_maps() {
   $openlayers_maps->description = 'The deployments map for the Applications details page';
   $openlayers_maps->data = array(
     'width' => 'auto',
-    'height' => '400px',
+    'height' => '550px',
     'image_path' => 'profiles/opencivic/openlayers_theme/img/',
     'css_path' => 'profiles/opencivic/openlayers_theme/style.css',
     'proxy_host' => '',
     'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
-        'centerpoint' => '7.023925,48.719961',
+        'centerpoint' => '7.023925,53.719961',
         'zoom' => '4',
       ),
       'restrict' => array(
@@ -169,7 +174,7 @@ function appcat_application_views_openlayers_maps() {
       ),
       'openlayers_behavior_keyboarddefaults' => array(),
       'openlayers_behavior_navigation' => array(
-        'zoomWheelEnabled' => 0,
+        'zoomWheelEnabled' => 1,
         'zoomBoxEnabled' => 1,
         'documentDrag' => 0,
       ),

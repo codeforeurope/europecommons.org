@@ -18,14 +18,14 @@ function appcat_home_views_openlayers_maps() {
   $openlayers_maps->description = 'The map for the OpenCivic home page';
   $openlayers_maps->data = array(
     'width' => 'auto',
-    'height' => '400px',
+    'height' => '550px',
     'image_path' => 'profiles/opencivic/openlayers_theme/img/',
     'css_path' => 'profiles/opencivic/openlayers_theme/style.css',
     'proxy_host' => '',
     'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
-        'centerpoint' => '7.023925,48.719961',
+        'centerpoint' => '7.023925,53.719961',
         'zoom' => '4',
       ),
       'restrict' => array(
@@ -37,7 +37,6 @@ function appcat_home_views_openlayers_maps() {
       'openlayers_behavior_cluster' => array(
         'clusterlayer' => array(
           'home_page_map_homepage' => 'home_page_map_homepage',
-          'organizations_map_openlayers_orgs' => 0,
         ),
         'distance' => '20',
         'threshold' => '',
@@ -60,7 +59,6 @@ function appcat_home_views_openlayers_maps() {
       ),
       'openlayers_behavior_popup' => array(
         'layers' => array(
-          'organizations_map_openlayers_orgs' => 'organizations_map_openlayers_orgs',
           'home_page_map_homepage' => 'home_page_map_homepage',
         ),
         'panMapIfOutOfView' => 0,
@@ -73,13 +71,14 @@ function appcat_home_views_openlayers_maps() {
       'home_page_map_homepage' => 'home_page_map_homepage',
     ),
     'layer_weight' => array(
-      'organization_map_openlayers_org' => '0',
-      'organizations_map_openlayers_orgs' => '0',
       'deployments_map_openlayers_1' => '0',
-      'deployments_list_openlayers_deployments' => '0',
+      'organizations_map_openlayers_orgs' => '0',
+      'organization_map_openlayers_org' => '0',
+      'geofield_formatter' => '0',
+      'app_deployments_map_openlayers_1' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
-      'geofield_formatter' => '0',
+      'deployments_list_openlayers_deployments' => '0',
       'home_page_map_homepage' => '1',
     ),
     'layer_styles' => array(
@@ -87,9 +86,10 @@ function appcat_home_views_openlayers_maps() {
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
       'deployments_list_openlayers_deployments' => 'deployment_marker',
+      'app_deployments_map_openlayers_1' => '0',
       'deployments_map_openlayers_1' => 'deployment_marker',
-      'organization_map_openlayers_org' => 'organization_marker',
       'organizations_map_openlayers_orgs' => 'organization_marker',
+      'organization_map_openlayers_org' => 'organization_marker',
       'home_page_map_homepage' => 'deployment_marker',
     ),
     'layer_styles_select' => array(
@@ -97,29 +97,32 @@ function appcat_home_views_openlayers_maps() {
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
       'deployments_list_openlayers_deployments' => 'deployment_marker',
+      'app_deployments_map_openlayers_1' => '0',
       'deployments_map_openlayers_1' => 'deployment_marker',
-      'organization_map_openlayers_org' => 'organization_marker',
       'organizations_map_openlayers_orgs' => 'organization_marker',
+      'organization_map_openlayers_org' => 'organization_marker',
       'home_page_map_homepage' => 'deployment_marker',
     ),
     'layer_activated' => array(
       'home_page_map_homepage' => 'home_page_map_homepage',
-      'organizations_map_openlayers_orgs' => 0,
       'geofield_formatter' => 0,
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
       'deployments_list_openlayers_deployments' => 0,
+      'app_deployments_map_openlayers_1' => 0,
       'deployments_map_openlayers_1' => 0,
+      'organizations_map_openlayers_orgs' => 0,
       'organization_map_openlayers_org' => 0,
     ),
     'layer_switcher' => array(
       'home_page_map_homepage' => 'home_page_map_homepage',
-      'organizations_map_openlayers_orgs' => 0,
       'geofield_formatter' => 0,
       'openlayers_kml_example' => 0,
       'openlayers_geojson_picture_this' => 0,
       'deployments_list_openlayers_deployments' => 0,
+      'app_deployments_map_openlayers_1' => 0,
       'deployments_map_openlayers_1' => 0,
+      'organizations_map_openlayers_orgs' => 0,
       'organization_map_openlayers_org' => 0,
     ),
     'projection' => 'EPSG:900913',

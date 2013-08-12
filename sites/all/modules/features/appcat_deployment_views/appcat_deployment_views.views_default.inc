@@ -55,7 +55,7 @@ function appcat_deployment_views_views_default_views() {
   $handler->display->display_options['fields']['field_deployment_of']['settings'] = array(
     'link' => 1,
   );
-  /* Field: Content: Organizations Involved */
+  /* Field: Content: Members */
   $handler->display->display_options['fields']['field_member']['id'] = 'field_member';
   $handler->display->display_options['fields']['field_member']['table'] = 'field_data_field_member';
   $handler->display->display_options['fields']['field_member']['field'] = 'field_member';
@@ -640,6 +640,13 @@ function appcat_deployment_views_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
@@ -677,7 +684,7 @@ function appcat_deployment_views_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '200';
   $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'Read more';
-  $handler->display->display_options['fields']['body']['alter']['more_link_path'] = '[view_node]';
+  $handler->display->display_options['fields']['body']['alter']['more_link_path'] = 'node/[nid]';
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['settings'] = array(
