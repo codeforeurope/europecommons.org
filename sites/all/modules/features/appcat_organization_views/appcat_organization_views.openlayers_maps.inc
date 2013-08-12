@@ -123,15 +123,15 @@ function appcat_organization_views_openlayers_maps() {
   $openlayers_maps->description = 'The map for the Organizations listing page';
   $openlayers_maps->data = array(
     'width' => 'auto',
-    'height' => '400px',
+    'height' => '550px',
     'image_path' => 'profiles/opencivic/openlayers_theme/img/',
     'css_path' => 'profiles/opencivic/openlayers_theme/style.css',
     'proxy_host' => '',
     'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
-        'centerpoint' => '7.023925,48.719961',
-        'zoom' => '8',
+        'centerpoint' => '7.023925,53.719961',
+        'zoom' => '4',
       ),
       'restrict' => array(
         'restrictextent' => 0,
@@ -176,13 +176,14 @@ function appcat_organization_views_openlayers_maps() {
       'organizations_map_openlayers_orgs' => 'organizations_map_openlayers_orgs',
     ),
     'layer_weight' => array(
+      'app_deployments_map_openlayers_1' => '0',
       'deployments_map_openlayers_1' => '0',
       'organization_map_openlayers_org' => '0',
+      'geofield_formatter' => '0',
       'deployments_list_openlayers_deployments' => '0',
-      'home_page_map_homepage' => '0',
       'openlayers_kml_example' => '0',
       'openlayers_geojson_picture_this' => '0',
-      'geofield_formatter' => '0',
+      'home_page_map_homepage' => '0',
       'organizations_map_openlayers_orgs' => '1',
     ),
     'layer_styles' => array(
@@ -191,6 +192,7 @@ function appcat_organization_views_openlayers_maps() {
       'openlayers_geojson_picture_this' => '0',
       'home_page_map_homepage' => '0',
       'deployments_list_openlayers_deployments' => '0',
+      'app_deployments_map_openlayers_1' => '0',
       'deployments_map_openlayers_1' => 'deployment_marker',
       'organization_map_openlayers_org' => '0',
       'organizations_map_openlayers_orgs' => 'organization_marker',
@@ -201,6 +203,7 @@ function appcat_organization_views_openlayers_maps() {
       'openlayers_geojson_picture_this' => '0',
       'home_page_map_homepage' => '0',
       'deployments_list_openlayers_deployments' => '0',
+      'app_deployments_map_openlayers_1' => '0',
       'deployments_map_openlayers_1' => 'deployment_marker',
       'organization_map_openlayers_org' => '0',
       'organizations_map_openlayers_orgs' => 'organization_marker',
@@ -212,6 +215,7 @@ function appcat_organization_views_openlayers_maps() {
       'openlayers_geojson_picture_this' => 0,
       'home_page_map_homepage' => 0,
       'deployments_list_openlayers_deployments' => 0,
+      'app_deployments_map_openlayers_1' => 0,
       'deployments_map_openlayers_1' => 0,
       'organization_map_openlayers_org' => 0,
     ),
@@ -222,6 +226,7 @@ function appcat_organization_views_openlayers_maps() {
       'openlayers_geojson_picture_this' => 0,
       'home_page_map_homepage' => 0,
       'deployments_list_openlayers_deployments' => 0,
+      'app_deployments_map_openlayers_1' => 0,
       'deployments_map_openlayers_1' => 0,
       'organization_map_openlayers_org' => 0,
     ),
