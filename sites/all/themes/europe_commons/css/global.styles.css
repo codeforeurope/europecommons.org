@@ -602,7 +602,7 @@ div.messages ul { margin-top: 0; margin-bottom: 0; }
 
 #block-menu-menu-signin-register-menu, #block-system-user-menu { float: right; line-height: 30px; }
 
-.block .block-title { font-size: 18pt; color: #000; margin-left: 0px; }
+.block .block-title { font-size: 1.45em; color: #000; margin-left: 0px; }
 
 .region-two-50-second { float: right; padding-top: 120px; }
 .region-two-50-second a.button { margin: 40px 0 0 0; padding: 100px 20px 50px 20px; height: 40px; -webkit-appearance: none; }
@@ -631,6 +631,8 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title { font-size: 20pt
 #block-panels-mini-blog > h2, #block-panels-mini-what-s-happening > h2 { background-color: #f8ec3b; padding-left: 5px; margin-bottom: 5px; }
 
 #mini-panel-call_to_action .block { margin-top: 10px; margin-bottom: 0px; }
+
+#block-views-home-page-map-block-1 .block-inner, #block-views-sponsors-block-block .block-inner { margin-left: 0px; margin-right: 0px; }
 
 .view-sponsors-block { padding-bottom: 120px; }
 .view-sponsors-block .views-row { align: center; float: left; margin-left: 40px; }

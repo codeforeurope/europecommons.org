@@ -2936,7 +2936,7 @@ tr.error {
 .block {
   .block-title {
     // background: $title-bar-color;
-    font-size: 18pt;
+    font-size: 1.45em;
     color: #000;
     margin-left: 0px;
   }
@@ -3054,6 +3054,13 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title {
 // ----------------------------------------------------------------------------
 // Sponsors block
 //
+
+#block-views-home-page-map-block-1 .block-inner,
+#block-views-sponsors-block-block .block-inner {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .view-sponsors-block {
   padding-bottom: 120px;
   .views-row {
