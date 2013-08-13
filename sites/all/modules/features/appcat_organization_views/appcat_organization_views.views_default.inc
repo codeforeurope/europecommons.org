@@ -392,7 +392,7 @@ function appcat_organization_views_views_default_views() {
       'address' => 'address',
     ),
   );
-  /* Field: Content: Phone */
+  /* Field: Content: Telephone */
   $handler->display->display_options['fields']['field_telephone']['id'] = 'field_telephone';
   $handler->display->display_options['fields']['field_telephone']['table'] = 'field_data_field_telephone';
   $handler->display->display_options['fields']['field_telephone']['field'] = 'field_telephone';
@@ -736,7 +736,7 @@ function appcat_organization_views_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Organizations Involved (field_member) */
+  /* Contextual filter: Content: Members (field_member) */
   $handler->display->display_options['arguments']['field_member_target_id']['id'] = 'field_member_target_id';
   $handler->display->display_options['arguments']['field_member_target_id']['table'] = 'field_data_field_member';
   $handler->display->display_options['arguments']['field_member_target_id']['field'] = 'field_member_target_id';
