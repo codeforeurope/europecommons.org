@@ -58,7 +58,8 @@ function appcat_search_db_default_search_api_index() {
         "field_software_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_deployment_of" : { "type" : "integer", "entity_type" : "node" },
         "search_api_language" : { "type" : "string" },
-        "search_api_viewed" : { "type" : "text" }
+        "search_api_viewed" : { "type" : "text" },
+        "search_api_aggregation_1" : { "type" : "text" }
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
@@ -71,7 +72,26 @@ function appcat_search_db_default_search_api_index() {
         "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
         "search_api_alter_add_viewed_entity" : { "status" : 1, "weight" : "0", "settings" : { "mode" : "full" } },
         "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] }
+        "search_api_alter_add_aggregation" : {
+          "status" : 1,
+          "weight" : "0",
+          "settings" : { "fields" : { "search_api_aggregation_1" : {
+                "name" : "aggregation_field",
+                "type" : "fulltext",
+                "fields" : [
+                  "field_additional_type",
+                  "field_civic_category",
+                  "field_services",
+                  "field_application_category",
+                  "field_feature_list",
+                  "field_license",
+                  "field_software_type"
+                ],
+                "description" : "A Fulltext aggregation of the following fields: Organization type, Civic sector, Services, Application function, Key features, License, Software type."
+              }
+            }
+          }
+        }
       },
       "processors" : {
         "search_api_case_ignore" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
@@ -202,11 +222,6 @@ function appcat_search_db_default_search_api_server() {
             "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"
           },
-          "field_deployment_of" : {
-            "table" : "search_api_db_apps_cat_db_nodes_index_field_deployment_of",
-            "type" : "integer",
-            "boost" : "1.0"
-          },
           "search_api_language" : {
             "table" : "search_api_db_apps_cat_db_nodes_index_search_api_language",
             "type" : "string",
@@ -214,6 +229,16 @@ function appcat_search_db_default_search_api_server() {
           },
           "search_api_viewed" : {
             "table" : "search_api_db_apps_cat_db_nodes_index_search_api_viewed",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "field_deployment_of" : {
+            "table" : "search_api_db_apps_cat_db_nodes_index_field_deployment_of",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "search_api_aggregation_1" : {
+            "table" : "search_api_db_apps_cat_db_nodes_index_search_api_aggregation_1",
             "type" : "text",
             "boost" : "1.0"
           }
