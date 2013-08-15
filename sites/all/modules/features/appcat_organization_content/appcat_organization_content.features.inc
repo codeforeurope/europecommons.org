@@ -154,9 +154,6 @@ function appcat_organization_content_rdf_default_mappings() {
     'title_field' => array(
       'predicates' => array(),
     ),
-    'field_twitter' => array(
-      'predicates' => array(),
-    ),
   );
 
   return $schemaorg;
