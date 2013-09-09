@@ -174,7 +174,7 @@ function appcat_application_views_openlayers_maps() {
       ),
       'openlayers_behavior_keyboarddefaults' => array(),
       'openlayers_behavior_navigation' => array(
-        'zoomWheelEnabled' => 1,
+        'zoomWheelEnabled' => 0,
         'zoomBoxEnabled' => 1,
         'documentDrag' => 0,
       ),
