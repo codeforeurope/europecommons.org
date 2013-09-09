@@ -3144,7 +3144,26 @@ div.view-highlighted .views-slideshow-overlay .slideshow-title {
   }
 }
 
-
+#block-views-34bdcd90e16d1e9872a71cba149cc064,
+#block-views-replated-deployments-block-1 {
+  .views-row {
+    border-top: 1px solid #E8E8E8;
+    margin-bottom: 10px;
+    .views-field-field-member {
+      .field-content {
+        display: inline;
+      }
+    }
+    .views-field-body {
+      p {
+        margin: 0 0 0;
+      }
+    }
+    .views-field-title {
+      font-size: 0.8em;
+    }
+  }
+}
 
 
 

@@ -752,31 +752,29 @@ function appcat_application_views_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Short description */
+  $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
+  $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['label'] = 'Description';
+  $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
+  /* Field: Content: Civic sector */
+  $handler->display->display_options['fields']['field_civic_category']['id'] = 'field_civic_category';
+  $handler->display->display_options['fields']['field_civic_category']['table'] = 'field_data_field_civic_category';
+  $handler->display->display_options['fields']['field_civic_category']['field'] = 'field_civic_category';
+  $handler->display->display_options['fields']['field_civic_category']['delta_offset'] = '0';
   /* Field: Content: Application function */
   $handler->display->display_options['fields']['field_application_category']['id'] = 'field_application_category';
   $handler->display->display_options['fields']['field_application_category']['table'] = 'field_data_field_application_category';
   $handler->display->display_options['fields']['field_application_category']['field'] = 'field_application_category';
   $handler->display->display_options['fields']['field_application_category']['label'] = 'App function';
   $handler->display->display_options['fields']['field_application_category']['delta_offset'] = '0';
-  /* Field: Content: Civic sector */
-  $handler->display->display_options['fields']['field_civic_category']['id'] = 'field_civic_category';
-  $handler->display->display_options['fields']['field_civic_category']['table'] = 'field_data_field_civic_category';
-  $handler->display->display_options['fields']['field_civic_category']['field'] = 'field_civic_category';
-  $handler->display->display_options['fields']['field_civic_category']['delta_offset'] = '0';
   /* Field: Content: Software type */
   $handler->display->display_options['fields']['field_software_type']['id'] = 'field_software_type';
   $handler->display->display_options['fields']['field_software_type']['table'] = 'field_data_field_software_type';
   $handler->display->display_options['fields']['field_software_type']['field'] = 'field_software_type';
   $handler->display->display_options['fields']['field_software_type']['label'] = 'App type';
   $handler->display->display_options['fields']['field_software_type']['delta_offset'] = '0';
-  /* Field: Content: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = 'Date added';
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['created']['custom_date_format'] = 'F j, Y';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
